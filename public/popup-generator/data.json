@@ -1,0 +1,218 @@
+[
+    {
+        "id": 1,
+        "path": "/popup-generator/pop-ups/01-security-code.svg",
+        "width": 170,
+        "height": 156
+    },
+    {
+        "id": 2,
+        "path": "/popup-generator/pop-ups/02-install-local-now.svg",
+        "width": 148,
+        "height": 170
+    },
+    {
+        "id": 3,
+        "path": "/popup-generator/pop-ups/03-choose-best-for-you.svg",
+        "width": 148,
+        "height": 170
+    },
+    {
+        "id": 4,
+        "path": "/popup-generator/pop-ups/04-delete-your-profile.svg",
+        "width": 158,
+        "height": 170
+    },
+    {
+        "id": 5,
+        "path": "/popup-generator/pop-ups/05-the-file-is-on-its-way.svg",
+        "width": 170,
+        "height": 100
+    },
+    {
+        "id": 6,
+        "path": "/popup-generator/pop-ups/06-join-our-mail-list.svg",
+        "width": 170,
+        "height": 158
+    },
+    {
+        "id": 7,
+        "path": "/popup-generator/pop-ups/07-hi-stranger.svg",
+        "width": 170,
+        "height": 102
+    },
+    {
+        "id": 8,
+        "path": "/popup-generator/pop-ups/08-subscribe-to-our-newsletter.svg",
+        "width": 170,
+        "height": 92
+    },
+    {
+        "id": 9,
+        "path": "/popup-generator/pop-ups/09-hello-stranger.svg",
+        "width": 108,
+        "height": 170
+    },
+    {
+        "id": 10,
+        "path": "/popup-generator/pop-ups/10-sign-up.svg",
+        "width": 170,
+        "height": 102
+    },
+    {
+        "id": 11,
+        "path": "/popup-generator/pop-ups/11-choose-your-mail.svg",
+        "width": 140,
+        "height": 170
+    },
+    {
+        "id": 12,
+        "path": "/popup-generator/pop-ups/12-sign-up.svg",
+        "width": 170,
+        "height": 130
+    },
+    {
+        "id": 13,
+        "path": "/popup-generator/pop-ups/13-welcome-to-talk.svg",
+        "width": 164,
+        "height": 160
+    },
+    {
+        "id": 14,
+        "path": "/popup-generator/pop-ups/14-jenny-yelvrer.svg",
+        "width": 200,
+        "height": 92
+    },
+    {
+        "id": 15,
+        "path": "/popup-generator/pop-ups/15-lets-feedback.svg",
+        "width": 200,
+        "height": 94
+    },
+    {
+        "id": 16,
+        "path": "/popup-generator/pop-ups/16-hey-there.svg",
+        "width": 160,
+        "height": 156
+    },
+    {
+        "id": 17,
+        "path": "/popup-generator/pop-ups/17-ready-to-export.svg",
+        "width": 190,
+        "height": 112
+    },
+    {
+        "id": 18,
+        "path": "/popup-generator/pop-ups/18-save-now.svg",
+        "width": 152,
+        "height": 170
+    },
+    {
+        "id": 19,
+        "path": "/popup-generator/pop-ups/19-reminders.svg",
+        "width": 164,
+        "height": 164
+    },
+    {
+        "id": 20,
+        "path": "/popup-generator/pop-ups/20-dont-miss-out.svg",
+        "width": 170,
+        "height": 128
+    },
+    {
+        "id": 21,
+        "path": "/popup-generator/pop-ups/21-dark-mode.svg",
+        "width": 122,
+        "height": 170
+    },
+    {
+        "id": 22,
+        "path": "/popup-generator/pop-ups/22-reasons-to-purschase-computers.svg",
+        "width": 118,
+        "height": 170
+    },
+    {
+        "id": 23,
+        "path": "/popup-generator/pop-ups/23-do-you-like-our-design.svg",
+        "width": 170,
+        "height": 150
+    },
+    {
+        "id": 24,
+        "path": "/popup-generator/pop-ups/24-learn-with-our-community.svg",
+        "width": 170,
+        "height": 142
+    },
+    {
+        "id": 25,
+        "path": "/popup-generator/pop-ups/25-reach-and-grow-audience.svg",
+        "width": 220,
+        "height": 44
+    },
+    {
+        "id": 26,
+        "path": "/popup-generator/pop-ups/26-welcome-to-onboarding.svg",
+        "width": 120,
+        "height": 170
+    },
+    {
+        "id": 27,
+        "path": "/popup-generator/pop-ups/27-get-straight-to-growing-your-business-well.svg",
+        "width": 152,
+        "height": 160
+    },
+    {
+        "id": 28,
+        "path": "/popup-generator/pop-ups/28-start-your-14-day-free.svg",
+        "width": 148,
+        "height": 160
+    },
+    {
+        "id": 29,
+        "path": "/popup-generator/pop-ups/29-love-nature.svg",
+        "width": 190,
+        "height": 102
+    },
+    {
+        "id": 30,
+        "path": "/popup-generator/pop-ups/30-sign-up-for-our-newsletter.svg",
+        "width": 200,
+        "height": 120
+    },
+    {
+        "id": 31,
+        "path": "/popup-generator/pop-ups/31-good-job-jenny.svg",
+        "width": 170,
+        "height": 158
+    },
+    {
+        "id": 32,
+        "path": "/popup-generator/pop-ups/32-oops.svg",
+        "width": 150,
+        "height": 160
+    },
+    {
+        "id": 33,
+        "path": "/popup-generator/pop-ups/33-be-the-first-to-know.svg",
+        "width": 190,
+        "height": 102
+    },
+    {
+        "id": 34,
+        "path": "/popup-generator/pop-ups/34-world-animal-day.svg",
+        "width": 200,
+        "height": 108
+    },
+    {
+        "id": 35,
+        "path": "/popup-generator/pop-ups/35-share-this-page.svg",
+        "width": 170,
+        "height": 152
+    },
+    {
+        "id": 36,
+        "path": "/popup-generator/pop-ups/36-sign-up-for-newslatter.svg",
+        "width": 132,
+        "height": 160
+    }
+]

@@ -1,0 +1,1 @@
+export { CoverPopupListItem } from './CoverPopupListItem';
