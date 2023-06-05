@@ -4,13 +4,15 @@ import Image from "next/image"
 import { usePaginationCount } from "../../context/PaginationCount"
 import { usePaginationSelection } from "../../context/PaginationSelection"
 
-
 import Popups from "@root/public/popup-generator/data.json"
 import { ITEM_PER_PAGINATION } from "@popUpGeneratorConstants/Constants.js"
 
 import DetermineItems from "../../helper/DetemineItems"
 import { CoverPopupListItem } from "./CoverPopupListItem"
-import { usePopupSelection, usePopupSelectionSet } from "../../context/PopupSelection"
+import {
+    usePopupSelection,
+    usePopupSelectionSet,
+} from "../../context/PopupSelection"
 
 export function PopupList() {
     const [hoveredPopupListItemId, setHoveredPopupListItemId] = useState(0)
@@ -25,8 +27,7 @@ export function PopupList() {
         paginationSelection,
     )
 
-    //console.log(popupSelection)
-    console.log(hoveredPopupListItemId)
+    // console.log(popupSelection, "popup selection")
     return (
         <div className="mb-8 flex flex-row flex-wrap gap-8 w-fit justify-center">
             {paginatedArray.map((o: any) => (
@@ -36,10 +37,11 @@ export function PopupList() {
                     onClick={() => popupSelectionSet(o.id)}
                     onMouseEnter={(e) => setHoveredPopupListItemId(o.id)}
                     onMouseLeave={(e) => setHoveredPopupListItemId(0)}
-                >                    
-                    {
-                        (o.id == popupSelection || o.id == hoveredPopupListItemId) && <CoverPopupListItem key={o.id} />
-                    }                    
+                >
+                    {(o.id == popupSelection ||
+                        o.id == hoveredPopupListItemId) && (
+                        <CoverPopupListItem key={o.id} />
+                    )}
                     <Image
                         alt="alt-text"
                         src={o.path}

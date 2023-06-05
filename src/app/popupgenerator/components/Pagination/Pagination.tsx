@@ -3,9 +3,10 @@ import { usePaginationCount } from "../../context/PaginationCount"
 import { usePaginationSelection, usePaginationSelectionSet } from "../../context/PaginationSelection"
 
 export const Pagination: React.FC = () => {
-    const paginationCount = usePaginationCount()
+    const paginationCount: number = usePaginationCount()
     const paginationSelection = usePaginationSelection()
     const paginationSelectionSet = usePaginationSelectionSet()
+    // console.log(paginationSelection, "pagination selection")
     return (
         <>
             <div className="flex flex-row gap-x-1 bg-paginations w-fit rounded-xl p-1">

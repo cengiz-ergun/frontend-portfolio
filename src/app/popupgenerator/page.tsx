@@ -21,7 +21,7 @@ export default function Home() {
                     </h2>
                     <p>
                         Measure your return on email marketing efforts easier
-                        and faster by using thebest online tools. Popupsmart is
+                        and faster by using the best online tools. Popups are
                         ready to help you build an efficient email list!
                     </p>
                 </div>

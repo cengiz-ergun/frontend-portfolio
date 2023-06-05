@@ -26,6 +26,6 @@
             "@popUpGeneratorConstants/*": ["./src/app/popupgenerator/constants/*"]
         }
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/popupgenerator/context/PaginationCount/PaginationCountContext.js"],
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/popupgenerator/context/PaginationCount/PaginationCountContext.tsx"],
     "exclude": ["node_modules"]
 }
