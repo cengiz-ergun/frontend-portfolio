@@ -4,6 +4,7 @@ import { Metadata } from "next"
 import { SubHead } from "./components/SubHead"
 import { PopupList } from "./components/PopupList"
 import { Pagination } from "./components/Pagination"
+import { PopupSetupContainer } from "./components/PopupSetupContainer"
 
 // export const metadata: Metadata = {
 //     icons: {
@@ -29,6 +30,7 @@ export default function Home() {
                 <SubHead num={1} subHeaderText="Choose your template" />
                 <PopupList />
                 <Pagination />
+                <PopupSetupContainer />
             </div>
         </>
     )

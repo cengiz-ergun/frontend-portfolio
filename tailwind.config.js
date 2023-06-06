@@ -20,9 +20,13 @@ module.exports = {
                 subHeaderNumberBg: "#EAEAEA",
                 paginations: "#F5F5F5",
                 popUpListItemHoverOrSelected: "#7D4AEA99",
+
+                "size-selection": "#F5F5F5",
+                "popup-position-selection": "#7D4AEA"
             },
             colors: {
                 popUpListItemInnerText: "#7D4AEA",
+                "popup-position-selection": "#DDDDDD"
             },
         },
     },
