@@ -10,7 +10,7 @@ export const PopupSetupContainer = (props: Props) => {
     return (
         <>
             <PopupStateProvider>
-                <div className="flex sm:flex-col lg:flex-row">
+                <div className="flex flex-col lg:flex-row">
                     <Setup />
                     <Preview />
                 </div>
