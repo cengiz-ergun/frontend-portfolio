@@ -1,9 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+    plugins: [require("flowbite/plugin")],
     content: [
         "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+        "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
     ],
     theme: {
         extend: {
@@ -22,13 +24,22 @@ module.exports = {
                 popUpListItemHoverOrSelected: "#7D4AEA99",
 
                 "size-selection": "#F5F5F5",
-                "popup-position-selection": "#7D4AEA"
+                "popup-position-selection": "#7D4AEA",
             },
             colors: {
                 popUpListItemInnerText: "#7D4AEA",
-                "popup-position-selection": "#DDDDDD"
+                "popup-position-selection": "#DDDDDD",
+            },
+
+            keyframes: {
+                wiggle: {
+                    "0%, 100%": { transform: "rotate(-3deg)" },
+                    "50%": { transform: "rotate(3deg)" },
+                },
+            },
+            animation: {
+                wiggle: "wiggle 1s ease-in-out infinite",
             },
         },
     },
-    plugins: [],
 }

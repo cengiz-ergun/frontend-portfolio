@@ -1,4 +1,6 @@
+import Head from "next/head"
 import "./globals.css"
+
 import { Inter } from "next/font/google"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -15,7 +17,16 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={inter.className}>{children}</body>
+            <Head>
+                <link
+                    rel="stylesheet"
+                    href="https://unpkg.com/flowbite@1.4.5/dist/flowbite.min.css"
+                />
+            </Head>
+            <body className={inter.className}>
+                {children}
+                <script src="https://unpkg.com/flowbite@1.4.5/dist/flowbite.js"></script>
+            </body>
         </html>
     )
 }
