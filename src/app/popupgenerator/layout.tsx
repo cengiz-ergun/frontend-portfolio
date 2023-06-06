@@ -1,5 +1,6 @@
 "use client"
 
+import { Analytics } from "@vercel/analytics/react"
 import "./sass/globals.scss"
 
 import { Metadata } from "next"
@@ -23,6 +24,7 @@ export default function PopUpGeneratorLayout({
                 <PaginationSelectionProvider>
                     <PopupSelectionProvider>
                         <section>{children}</section>
+                        <Analytics />
                     </PopupSelectionProvider>
                 </PaginationSelectionProvider>
             </PaginationCountProvider>
