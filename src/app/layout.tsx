@@ -18,14 +18,14 @@ export default function RootLayout({
     return (
         <html lang="en">
             <Head>
-                <link
+                {/* <link
                     rel="stylesheet"
                     href="https://unpkg.com/flowbite@1.4.5/dist/flowbite.min.css"
-                />
+                /> */}
             </Head>
             <body className={inter.className}>
                 {children}
-                <script src="https://unpkg.com/flowbite@1.4.5/dist/flowbite.js"></script>
+                {/* <script src="https://unpkg.com/flowbite@1.4.5/dist/flowbite.js"></script> */}
             </body>
         </html>
     )
