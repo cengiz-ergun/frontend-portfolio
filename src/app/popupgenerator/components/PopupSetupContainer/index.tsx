@@ -1,1 +1,1 @@
-export { PopupSetupContainer } from './PopupSetupAndPreviewContainer'
+export { PopupSetupAndPreviewContainer } from './PopupSetupAndPreviewContainer'
