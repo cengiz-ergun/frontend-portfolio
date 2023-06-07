@@ -25,12 +25,6 @@ module.exports = {
 
                 "size-selection": "#F5F5F5",
                 "popup-position-selection": "#7D4AEA",
-
-                "blue": "#0000FF",
-                "green": "#00FF00",
-                "purple": "#800080",
-                "red": "#FF0000",
-                "yellow": "#FFFF00"
             },
             colors: {
                 popUpListItemInnerText: "#7D4AEA",
