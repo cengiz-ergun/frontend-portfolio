@@ -12,3 +12,4 @@ export const POPUP_POSITION_PLACES = [
     "bottom-center",
     "bottom-right",
 ]
+export const POPUP_AVAILABLE_COLORS = ["blue", "green", "purple", "red", "yellow"]

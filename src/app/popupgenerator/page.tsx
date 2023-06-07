@@ -4,7 +4,7 @@ import { Metadata } from "next"
 import { SubHead } from "./components/SubHead"
 import { PopupList } from "./components/PopupList"
 import { Pagination } from "./components/Pagination"
-import { PopupSetupContainer } from "./components/PopupSetupContainer"
+import { PopupSetupAndPreviewContainer } from "./components/PopupSetupContainer/PopupSetupAndPreviewContainer"
 
 // export const metadata: Metadata = {
 //     icons: {
@@ -15,7 +15,7 @@ import { PopupSetupContainer } from "./components/PopupSetupContainer"
 export default function Home() {
     return (
         <>
-            <div className="2xl:px-64 sm:px-5 py-24 font-poppins">
+            <div className="2xl:px-64 px-5 py-24 font-poppins">
                 <div className="max-w-md mb-24">
                     <h2 className="font-semibold text-4xl mb-3.5">
                         Modal Card Generator
@@ -30,7 +30,7 @@ export default function Home() {
                 <SubHead num={1} subHeaderText="Choose your template" />
                 <PopupList />
                 <Pagination />
-                <PopupSetupContainer />
+                <PopupSetupAndPreviewContainer />
             </div>
         </>
     )

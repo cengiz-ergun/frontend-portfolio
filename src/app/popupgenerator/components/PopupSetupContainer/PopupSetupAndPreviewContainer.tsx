@@ -4,7 +4,7 @@ import { Preview } from "./Preview"
 
 type Props = {}
 
-export const PopupSetupContainer = (props: Props) => {
+export const PopupSetupAndPreviewContainer = (props: Props) => {
     return (
         <>
             {" "}

@@ -3,6 +3,7 @@ import { SubHead } from "../../SubHead"
 import { SubSetup } from "./SubSetup"
 import { Size } from "./Size"
 import { Position } from "./Position"
+import { Colors } from "./Colors"
 
 type Props = {}
 
@@ -15,6 +16,9 @@ export const Setup = (props: Props) => {
             </SubSetup>
             <SubSetup miniHeader="Position">
                 <Position />
+            </SubSetup>
+            <SubSetup miniHeader="Colors">
+                <Colors />
             </SubSetup>
         </div>
     )
