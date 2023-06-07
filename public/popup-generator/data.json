@@ -3,13 +3,15 @@
         "id": 1,
         "path": "/popup-generator/pop-ups/01-security-code.svg",
         "width": 170,
-        "height": 156
+        "height": 156,
+        "isAvailable": true
     },
     {
         "id": 2,
         "path": "/popup-generator/pop-ups/02-install-local-now.svg",
         "width": 148,
-        "height": 170
+        "height": 170,
+        "isAvailable": true
     },
     {
         "id": 3,

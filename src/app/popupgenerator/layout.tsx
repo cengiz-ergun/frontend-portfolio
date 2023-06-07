@@ -7,6 +7,7 @@ import { Metadata } from "next"
 import { PaginationCountProvider } from "./context/PaginationCount"
 import { PaginationSelectionProvider } from "./context/PaginationSelection"
 import { PopupSelectionProvider } from "./context/PopupSelection"
+import { PopupStateProvider } from "./context/PopupState"
 
 // export const metadata: Metadata = {
 //     title: "Popup Generator",
@@ -23,8 +24,10 @@ export default function PopUpGeneratorLayout({
             <PaginationCountProvider>
                 <PaginationSelectionProvider>
                     <PopupSelectionProvider>
-                        <section>{children}</section>
-                        <Analytics />
+                        <PopupStateProvider>
+                            <section>{children}</section>
+                            <Analytics />
+                        </PopupStateProvider>
                     </PopupSelectionProvider>
                 </PaginationSelectionProvider>
             </PaginationCountProvider>

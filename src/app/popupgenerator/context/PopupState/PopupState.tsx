@@ -1,7 +1,9 @@
 import React, { ReactNode, createContext, useContext } from "react"
 import { useImmerReducer } from "use-immer"
-import { SecurityCode, initialSecurityCode } from "../../types/types"
-import { usePopupSelection } from "../PopupSelection"
+import {
+    InstallLocalNowPopup,
+    SecurityCodePopup,
+} from "../../types/types"
 
 type Props = {
     children: ReactNode
@@ -10,15 +12,17 @@ type Props = {
 type Action = {
     type: string
     payload: string
-    property: string
+    property?: string
 }
+
+const securityCodePopup = new SecurityCodePopup()
+const installLocalNowPopup = new InstallLocalNowPopup()
 
 const PopupContext = createContext<any>({} as any)
 const PopupDispatchContext = createContext<any>({} as any)
 
 export const PopupStateProvider = (props: Props) => {
-    // const popupSelection = usePopupSelection()
-    const [state, dispatch] = useImmerReducer(popUpReducer, initialSecurityCode)
+    const [state, dispatch] = useImmerReducer(popUpReducer, securityCodePopup)
     // console.log(state)
     return (
         <PopupContext.Provider value={state}>
@@ -31,8 +35,20 @@ export const PopupStateProvider = (props: Props) => {
 
 function popUpReducer(draft: any, action: Action) {
     switch (action.type) {
+        case "select_another_popup": {
+            if (action.payload == "1") {
+                draft = securityCodePopup
+            } else if (action.payload == "2") {
+                draft = installLocalNowPopup
+            }
+            else{
+                throw new Error("Selected not implemented popup"); 
+            }
+            return draft
+        }
+
         case "popup_state_property_changed": {
-            draft[action.property] = action.payload 
+            draft[action.property as string] = action.payload
         }
     }
 }
