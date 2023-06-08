@@ -13,10 +13,8 @@ import {
     usePopupSelectionSet,
 } from "../../context/PopupSelection"
 import {
-    usePopupState,
     usePopupStateDispatch,
 } from "../../context/PopupState/PopupState"
-import Link from "next/link"
 
 export function PopupList() {
     const [hoveredPopupListItemId, setHoveredPopupListItemId] = useState(0)

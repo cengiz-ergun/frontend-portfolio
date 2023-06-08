@@ -4,7 +4,7 @@ import { Metadata } from "next"
 import { SubHead } from "./components/SubHead"
 import { PopupList } from "./components/PopupList"
 import { Pagination } from "./components/Pagination"
-import { PopupSetupAndPreviewContainer } from "./components/PopupSetupContainer/PopupSetupAndPreviewContainer"
+import { PopupSetupAndPreviewContainer } from "./components/PopupSetupAndPreviewContainer/PopupSetupAndPreviewContainer"
 
 // export const metadata: Metadata = {
 //     icons: {

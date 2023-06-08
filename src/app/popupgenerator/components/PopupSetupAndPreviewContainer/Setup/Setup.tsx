@@ -27,9 +27,6 @@ export const Setup = (props: Props) => {
             <SubSetup miniHeader="Upload Logo">
                 <UploadLogoImage imageOrLogo="logo" />
             </SubSetup>
-            {/* <SubSetup miniHeader="Upload Image">
-                <UploadLogoImage imageOrLogo="image" />
-            </SubSetup> */}
 
             <SubHead num={3} subHeaderText="Content" />
             <SubSetup miniHeader="Edit your content">
