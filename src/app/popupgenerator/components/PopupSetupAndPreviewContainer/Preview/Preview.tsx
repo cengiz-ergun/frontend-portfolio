@@ -1,18 +1,13 @@
-import React, { useState } from "react"
-import { CoverAsNotImplemented } from "../../../helper/CoverAsNotImplemented"
+import React from "react"
+import { ConditionalPopup } from "./ConditionalPopup"
+
 
 type Props = {}
 
 export const Preview = (props: Props) => {
-    // const [swtch, setSwtch] = useState(false)
     return (
-        <div
-            className="hidden relative lg:flex bg-slate-100 w-full mt-24"
-            // onMouseEnter={() => setSwtch(true)}
-            // onMouseLeave={() => setSwtch(false)}
-        >
-            {/* {swtch && <CoverAsNotImplemented message="Popup will be shown here soon."/>} */}
-            <CoverAsNotImplemented message="Popup will be shown here soon."/>
+        <div className="sticky top-1 hidden lg:flex bg-gray-50 w-full h-screen mt-24 border-2 border-solid">
+            <ConditionalPopup />
         </div>
     )
 }

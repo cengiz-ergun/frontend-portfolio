@@ -1,6 +1,46 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin')
 module.exports = {
-    plugins: [require("flowbite/plugin")],
+    plugins: [require("flowbite/plugin"),    plugin(function ({ addComponents, theme }) {
+        addComponents({
+          '.top-left': { 
+            "justify-content": "flex-start",
+            "align-items": "flex-start"
+          },
+          '.middle-center': {
+            "justify-content": "center",
+            "align-items": "center"
+          },
+          ".top-center": {
+            "justify-content": "flex-start",
+            "align-items": "center"
+          },       
+          ".top-right": {
+            "justify-content": "flex-start",
+            "align-items": "flex-end"
+          },          
+          ".middle-left": {
+            "justify-content": "center",
+            "align-items": "flex-start"
+          },          
+          ".middle-right" :{
+            "justify-content": "center",
+            "align-items": "flex-end"
+          },          
+          ".bottom-left": {
+            "justify-content": "flex-end",
+            "align-items": "flex-start"
+          },          
+          ".bottom-center": {
+            "justify-content": "flex-end",
+            "align-items": "center"
+          },          
+          ".bottom-right": {
+            "justify-content": "flex-end",
+            "align-items": "flex-end"
+          }
+        })
+      })],
     content: [
         "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -31,6 +71,7 @@ module.exports = {
                 "popup-position-selection": "#DDDDDD",
                 "upload-logo-image-border": "#DDDDDD",
                 "content-input-border": "#DDDDDD",
+                "popup-preview-input": "#D2DAE3"
             },
 
             keyframes: {

@@ -36,7 +36,7 @@ abstract class Popup implements IPopup {
     abstract contents: object // To make mandatory in child
 
     constructor() {
-        this.size = "medium"
+        this.size = "large"
         this.position = "middle-center"
         this.color = "blue"
         this.visitorDevice = "desktop"
