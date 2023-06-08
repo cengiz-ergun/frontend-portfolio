@@ -6,12 +6,19 @@ import { useState } from "react"
 
 export default function Home() {
     const [state, setState] = useState("default")
+
+    const [showPhone, setShowPhone] = useState(false)
+    const [showMail, setShowMail] = useState(false)
+
+
+
     return (
         <div className="px-3 lg:px-0">
             <nav className="flex justify-center items-center w-full inset-x-0 fixed z-10 bg-black text-white py-5">
                 <div className="flex flex-row gap-8 text-xl">
-                    <Link href={"#me"}>Me</Link>
+                    <Link href={"#me"}>About Me</Link>
                     <Link href={"#projects"}>Projects</Link>
+                    <Link href={"#contact"}>Contact</Link>
                 </div>
             </nav>
 
@@ -26,7 +33,9 @@ export default function Home() {
                             <hr className="h-px my-6 border-2 border-solid border-black"></hr>
                         </div>
                         <div className="w-fit whitespace-nowrap">
-                            <span className="text-xl">Web Developer</span>
+                            <span className="text-xl font-semibold">
+                                Web Developer
+                            </span>
                         </div>
                     </div>
                     <div className="text-center">
@@ -207,6 +216,78 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div
+                id="contact"
+                className="h-screen flex flex-col justify-center items-center gap-5"
+            >
+                <Link
+                    target="blank"
+                    href={"https://www.linkedin.com/in/cengiz1erg/"}
+                >
+                    {" "}
+                    <Image
+                        src={"/general/linkedn.svg"}
+                        alt="asda"
+                        width={0}
+                        height={0}
+                        style={{
+                            height: "60px",
+                            width: "auto",
+                        }}
+                    />
+                </Link>
+                <Link target="blank" href={"https://github.com/cengiz-ergun"}>
+                    <Image
+                        src={"/general/github.svg"}
+                        alt="asda"
+                        width={0}
+                        height={0}
+                        style={{
+                            height: "60px",
+                            width: "auto",
+                        }}
+                    />
+                </Link>
+                <div className="flex flex-row justify-between items-center">
+                    <Image
+                        src={"/general/phone.svg"}
+                        alt="asda"
+                        width={0}
+                        height={0}
+                        style={{
+                            height: "60px",
+                            width: "auto",
+                        }}
+                        onClick={() => setShowPhone(!showPhone)}
+                        // onMouseLeave={() => setShowPhone(false)}
+                    />
+                    {
+                        showPhone && (
+                            <span>+90 544 403 06 98</span>
+                        )
+                    }
+                </div>
+                <div className="flex flex-row justify-between items-center gap-5">
+                    <Image
+                        src={"/general/mail.svg"}
+                        alt="asda"
+                        width={0}
+                        height={0}
+                        style={{
+                            height: "60px",
+                            width: "auto",
+                        }}
+                        onClick={() => setShowMail(!showMail)}
+                        // onMouseLeave={() => setShowPhone(false)}
+                    />
+                    {
+                        showMail && (
+                            <span>cengiz0.cengiz1@gmail.com</span>
+                        )
+                    }
                 </div>
             </div>
         </div>

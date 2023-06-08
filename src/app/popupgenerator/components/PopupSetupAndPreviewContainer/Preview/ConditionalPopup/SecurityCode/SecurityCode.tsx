@@ -12,7 +12,7 @@ export const SecurityCode = (props: Props) => {
     const position = state.position
     const color = state.color
     const contents = state.contents
-    console.log(state)
+    // console.log(state)
     return (
         // py-10 px-16
         <div className="absolute inset-0">
