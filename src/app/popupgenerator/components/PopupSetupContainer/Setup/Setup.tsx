@@ -13,7 +13,7 @@ type Props = {}
 export const Setup = (props: Props) => {
     const state = usePopupState()
     return (
-        <div id="setup" className="w-full sm:w-[378px]">
+        <div className="w-full sm:w-[378px]">
             <SubHead num={2} subHeaderText="Appearance (Size, colors, logo)" />
             <SubSetup miniHeader="Size">
                 <Size />
