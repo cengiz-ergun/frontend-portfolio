@@ -7,7 +7,7 @@ export const Preview = (props: Props) => {
     // const [swtch, setSwtch] = useState(false)
     return (
         <div
-            className="relative flex bg-slate-100 w-full mt-24"
+            className="hidden relative lg:flex bg-slate-100 w-full mt-24"
             // onMouseEnter={() => setSwtch(true)}
             // onMouseLeave={() => setSwtch(false)}
         >
