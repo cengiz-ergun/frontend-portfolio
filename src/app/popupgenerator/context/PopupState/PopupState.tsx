@@ -23,7 +23,6 @@ const PopupDispatchContext = createContext<any>({} as any)
 
 export const PopupStateProvider = (props: Props) => {
     const [state, dispatch] = useImmerReducer(popUpReducer, securityCodePopup)
-    // console.log(state)
     return (
         <PopupContext.Provider value={state}>
             <PopupDispatchContext.Provider value={dispatch}>
@@ -46,9 +45,13 @@ function popUpReducer(draft: any, action: Action) {
             }
             return draft
         }
-
         case "popup_state_property_changed": {
             draft[action.property as string] = action.payload
+            break
+        }
+        case "popup_state_contents_property_changed": {
+            draft["contents"][action.property as string] = action.payload
+            break
         }
     }
 }

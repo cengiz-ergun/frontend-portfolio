@@ -9,7 +9,7 @@ export const Pagination: React.FC = () => {
     // console.log(paginationSelection, "pagination selection")
     return (
         <>
-            <div className="flex flex-row gap-x-1 bg-paginations w-fit rounded-xl p-1 mb-24">
+            <div className="flex flex-row gap-x-1 bg-paginations w-fit rounded-xl p-1">
                 {Array.from({ length: paginationCount }, (_, i) => (
                     <span
                         key={i + 1}

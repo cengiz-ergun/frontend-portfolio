@@ -29,6 +29,8 @@ module.exports = {
             colors: {
                 popUpListItemInnerText: "#7D4AEA",
                 "popup-position-selection": "#DDDDDD",
+                "upload-logo-image-border": "#DDDDDD",
+                "content-input-border": "#DDDDDD",
             },
 
             keyframes: {

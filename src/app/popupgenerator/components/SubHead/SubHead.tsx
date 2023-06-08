@@ -9,7 +9,7 @@ export function SubHead({
 }) {
     return (
         <>
-            <div className="flex flex-row items-center gap-x-4 mb-8">
+            <div className="flex flex-row items-center gap-x-4 mb-8 mt-24">
                 <div className="w-9 h-9 flex justify-center items-center rounded-full bg-subHeaderNumberBg">
                     <span>{num}</span>
                 </div>
