@@ -24,7 +24,7 @@ export const SecurityCode = (props: Props) => {
                             : size == "medium"
                             ? "py-8 px-12"
                             : "py-6 px-8"
-                    } border border-solid border-black bg-white`}
+                    } flex flex-col border border-solid border-black bg-white`}
                 >
                     <div
                         className={`${

@@ -12,6 +12,9 @@ type Props = {}
 
 export const Setup = (props: Props) => {
     const state = usePopupState()
+    // console.log(state)
+    const isLogoUploadSectionWillBeRendered = state.logoBase64 != undefined
+    const isImageUploadSectionWillBeRendered = state.imageBase64 != undefined
     return (
         <div className="w-full sm:w-[378px]">
             <SubHead num={2} subHeaderText="Appearance (Size, colors, logo)" />
@@ -24,17 +27,21 @@ export const Setup = (props: Props) => {
             <SubSetup miniHeader="Colors">
                 <Colors />
             </SubSetup>
-            <SubSetup miniHeader="Upload Logo">
-                <UploadLogoImage imageOrLogo="logo" />
-            </SubSetup>
+            {isLogoUploadSectionWillBeRendered && (
+                <SubSetup miniHeader="Upload Logo">
+                    <UploadLogoImage imageOrLogo="logo" />
+                </SubSetup>
+            )}
 
             <SubHead num={3} subHeaderText="Content" />
             <SubSetup miniHeader="Edit your content">
                 <Contents contents={state.contents} />
             </SubSetup>
-            <SubSetup miniHeader="Upload Image">
-                <UploadLogoImage imageOrLogo="image" />
-            </SubSetup>
+            {isImageUploadSectionWillBeRendered && (
+                <SubSetup miniHeader="Upload Image">
+                    <UploadLogoImage imageOrLogo="image" />
+                </SubSetup>
+            )}
         </div>
     )
 }

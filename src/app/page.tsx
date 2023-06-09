@@ -71,7 +71,7 @@ export default function Home() {
                                     <div className="flex flex-row items-center gap-2">
                                         <div>Progress:</div>
                                         <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                                            <div className="bg-purple-800 h-2.5 rounded-full w-1/3"></div>
+                                            <div className="bg-purple-800 h-2.5 rounded-full w-1/2"></div>
                                         </div>
                                     </div>
                                     <Link
