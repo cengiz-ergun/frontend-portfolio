@@ -34,7 +34,7 @@ export function PopupList() {
             className={`mb-8 flex flex-row flex-wrap gap-8 w-fit justify-center`}
         >
             {paginatedArray.map((o: any) => (
-                <a href={o.isAvailable ? "/popupgenerator#preview" : void 0}>
+                <a key={o.id} href={o.isAvailable ? "/popupgenerator#preview" : void 0}>
                     <div
                         key={o.id}
                         className={`flex justify-center items-center w-72 h-52 relative ${
