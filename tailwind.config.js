@@ -62,7 +62,8 @@ module.exports = {
                 subHeaderNumberBg: "#EAEAEA",
                 paginations: "#F5F5F5",
                 popUpListItemHoverOrSelected: "#7D4AEA99",
-
+                button: "#7D4AEA",
+                codeGeneration: "#333333",
                 "size-selection": "#F5F5F5",
                 "popup-position-selection": "#7D4AEA",
             },

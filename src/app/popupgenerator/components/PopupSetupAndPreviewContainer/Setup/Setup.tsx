@@ -7,12 +7,14 @@ import { Colors } from "./Colors"
 import { UploadLogoImage } from "./UploadLogoImage"
 import { Contents } from "./Contents"
 import { usePopupState } from "../../../context/PopupState/PopupState"
+import { CodeOnButtonClick } from "./CodeOnButtonClick"
+import { usePopupSelection } from "../../../context/PopupSelection"
 
 type Props = {}
 
 export const Setup = (props: Props) => {
     const state = usePopupState()
-    // console.log(state)
+    const selectedPopupId = usePopupSelection()
     const isLogoUploadSectionWillBeRendered = state.logoBase64 != undefined
     const isImageUploadSectionWillBeRendered = state.imageBase64 != undefined
     return (
@@ -41,6 +43,13 @@ export const Setup = (props: Props) => {
                 <SubSetup miniHeader="Upload Image">
                     <UploadLogoImage imageOrLogo="image" />
                 </SubSetup>
+            )}
+
+            {selectedPopupId == 1 && (
+                <>
+                    <SubHead num={4} subHeaderText="Code" />
+                    <CodeOnButtonClick />
+                </>
             )}
         </div>
     )

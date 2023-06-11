@@ -16,7 +16,7 @@ export const SecurityCode = (props: Props) => {
     return (
         // py-10 px-16
         <div className="absolute inset-0">
-            <div className={`h-full flex flex-col text-center ${position} `}>
+            <div className={`h-full flex flex-col text-center ${position}`}>
                 <div
                     className={`${
                         size == "large"
