@@ -1,12 +1,15 @@
 import { usePopupState } from "@root/src/app/popupgenerator/context/PopupState/PopupState"
 import React, { useEffect, useState } from "react"
+// import absoluteUrl from 'next-absolute-url'
+
 
 type Props = {}
 
 export const CodeOnButtonClick = (props: Props) => {
     const state = usePopupState()
     const [isCopied, setIsCopied] = useState(false)
-    const code = `<script type="text/javascript" src="${"./popups/securitycode/script.js"}"></script><script> window.start.init({ size: "${
+    const origin = typeof window !== 'undefined' && window.location.origin ? window.location.origin : '';
+    const code = `<script type="text/javascript" src="${origin}/popups/securitycode/script.js"></script><script> window.start.init({ size: "${
         state.size
     }", position: "${state.position}", color: "${state.color}", contents: {
         content1: "${state.contents.content1}",
@@ -16,7 +19,6 @@ export const CodeOnButtonClick = (props: Props) => {
         content5: "${state.contents.content5}"
     }})</script>`
     const [generatedCode, setGeneratedCode] = useState("")
-
     useEffect(() => {
         setGeneratedCode("")
     }, [state])

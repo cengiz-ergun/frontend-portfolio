@@ -64,7 +64,9 @@ export const SecurityCode = (props: Props) => {
                               ? "h-11 pl-2.5 mb-7"
                               : "h-10 pl-2 mb-6"
                       } rounded-lg border border-solid border-popup-preview-input outline-none focus:border-gray-700`}
-                        defaultValue={contents.content3}
+                        // defaultValue={contents.content3}
+                        placeholder={contents.content3}
+                        disabled
                     />
                     <div className="flex flex-row justify-between gap-4">
                         <button className="py-2 px-14 text-black bg-white rounded-lg border border-solid border-popup-preview-input">
