@@ -1,15 +1,15 @@
+import { usePopupSelection } from "@root/src/app/popupgenerator/context/PopupSelection"
 import { usePopupState } from "@root/src/app/popupgenerator/context/PopupState/PopupState"
 import React, { useEffect, useState } from "react"
-// import absoluteUrl from 'next-absolute-url'
-
 
 type Props = {}
 
 export const CodeOnButtonClick = (props: Props) => {
     const state = usePopupState()
+    const selectedId = usePopupSelection()
     const [isCopied, setIsCopied] = useState(false)
     const origin = typeof window !== 'undefined' && window.location.origin ? window.location.origin : '';
-    const code = `<script type="text/javascript" src="${origin}/popups/securitycode/script.js"></script><script> window.start.init({ size: "${
+    const code = (selectedId == 1) ? `<script type="text/javascript" src="${origin}/popups/securitycode/script.js"></script><script> window.start.init({ size: "${
         state.size
     }", position: "${state.position}", color: "${state.color}", contents: {
         content1: "${state.contents.content1}",
@@ -17,6 +17,13 @@ export const CodeOnButtonClick = (props: Props) => {
         content3: "${state.contents.content3}",
         content4: "${state.contents.content4}",
         content5: "${state.contents.content5}"
+    }})</script>` : `<script type="text/javascript" src="${origin}/popups/installlocalnow/script.js"></script><script> window.start.init({ size: "${
+        state.size
+    }", position: "${state.position}", color: "${state.color}", contents: {
+        content1: "${state.contents.content1}",
+        content2: "${state.contents.content2}",
+        content3: "${state.contents.content3}",
+        content4: "${state.contents.content4}",
     }})</script>`
     const [generatedCode, setGeneratedCode] = useState("")
     useEffect(() => {

@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600&display=swap');
+
+#installlocalnow {
+    font-family: 'Inter', sans-serif;
+    position:fixed;
+    z-index:9999999;
+    width: max-content;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+    box-shadow: 5px 10px 18px black;
+
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+}
+
+
+/* position */
+#installlocalnow.top-left{
+    left: 0; 
+
+    top: 0;
+}
+#installlocalnow.top-center{
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+
+    top: 0;
+}
+#installlocalnow.top-right{
+    right: 0; 
+
+    top: 0;
+}
+#installlocalnow.middle-left{
+    left: 0;
+
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#installlocalnow.middle-center{
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#installlocalnow.middle-right{
+    right: 0;
+
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#installlocalnow.bottom-left{
+    left: 0;
+    
+    bottom: 0;
+}
+#installlocalnow.bottom-center{
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+
+    bottom: 0;
+}
+#installlocalnow.bottom-right{
+    right: 0;
+    
+    bottom: 0;
+}
+
+#installlocalnow > :nth-child(2){
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#installlocalnow > :nth-child(2) > :first-child{
+    font-weight: 700;
+}
+#installlocalnow > :nth-child(2) > :nth-child(2){
+    font-weight: 400;
+}
+#installlocalnow > :nth-child(2) > :nth-child(3){
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+#installlocalnow > :nth-child(2) > :nth-child(3) > :nth-child(1){
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    height: 40px;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+#installlocalnow > :nth-child(2) > :nth-child(3) > :nth-child(2){
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: white;
+    border: 1px solid #D2DAE3;
+    cursor: pointer;
+}
+
+/* exit button */
+#installlocalnow .exit-button{
+    position: absolute;
+    z-index:99999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    top: 20px;
+    right: 20px;
+    border: none;
+    border-radius: 100%;
+    color: white;
+}
+

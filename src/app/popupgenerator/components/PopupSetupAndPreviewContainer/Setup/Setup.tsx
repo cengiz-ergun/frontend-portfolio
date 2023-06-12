@@ -45,12 +45,14 @@ export const Setup = (props: Props) => {
                 </SubSetup>
             )}
 
-            {selectedPopupId == 1 && (
+            {/* {(selectedPopupId == 1 || selectedPopupId == 2) && (
                 <>
                     <SubHead num={4} subHeaderText="Code" />
                     <CodeOnButtonClick />
                 </>
-            )}
+            )} */}
+            <SubHead num={4} subHeaderText="Code" />
+            <CodeOnButtonClick />
         </div>
     )
 }
