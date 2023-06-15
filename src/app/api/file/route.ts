@@ -42,11 +42,11 @@ export async function POST(req: NextRequest) {
     await fs.mkdir(destinationDirPath, { recursive: true });
   }
   await fs.writeFile(
-    path.join(destinationDirPath, file.name),
+    path.join(destinationDirPath, "random.svg"),
     Buffer.from(fileArrayBuffer)
   );
 
   return NextResponse.json({
-    status: 200,
+    fileName: "random.svg"
   });
 }

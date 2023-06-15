@@ -42,7 +42,7 @@ export const UploadLogoImage = (props: Props) => {
                 .then((response) => {
                     dispatchPopupState({
                         type: "popup_state_property_changed",
-                        payload: file.name,
+                        payload: "random.svg",
                         property:
                             props.imageOrLogo == "logo"
                                 ? "logoFileName"
