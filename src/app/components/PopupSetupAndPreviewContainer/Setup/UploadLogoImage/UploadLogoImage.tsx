@@ -1,5 +1,7 @@
 "use client"
 
+var path = require('path');
+
 import Image from "next/image"
 import axios from "axios"
 import React, { useRef } from "react"
@@ -31,14 +33,15 @@ export const UploadLogoImage = (props: Props) => {
             var form = new FormData()
             form.append("file", file)
 
+            var url = path.join("api", "file")
+            console.log(url)
             const axiosResponse = await axios
-                .post(ORIGIN_ADDRESS + "/api/file", form, {
+                .post(url, form, {
                     headers: {
                         "Content-Type": "multipart/form-data",
                     },
                 })
                 .then((response) => {
-                    console.log(response)
                     dispatchPopupState({
                         type: "popup_state_property_changed",
                         payload: file.name,
