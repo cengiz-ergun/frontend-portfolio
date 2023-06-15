@@ -34,11 +34,17 @@ export const UploadLogoImage = (props: Props) => {
 
     useEffect(() => {
         item = document.getElementsByClassName("ut-hidden")[0]
-        document.getElementsByClassName("ut-hidden")[0].addEventListener("change", () => {
-            uploadStateSet("active")
-        })
+        document
+            .getElementsByClassName("ut-hidden")[0]
+            .addEventListener("change", () => {
+                uploadStateSet("active")
+            })
     }, [])
-    item = document.getElementsByClassName("ut-hidden")[0]
+
+    if (typeof window !== "undefined") {
+        item = document.getElementsByClassName("ut-hidden")[0]
+    }
+
     const onFileUploadClick = () => {
         // inputFile.current?.click()
 
