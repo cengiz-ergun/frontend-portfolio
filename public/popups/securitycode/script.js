@@ -37,7 +37,7 @@ function Pop() {
                 "src",
                 content.logo == "example-logo.svg"
                     ? "./popup-generator/logo-image/star.svg"
-                    : `./uploads/${content.logo}`,
+                    : `${content.logo}`,
             )
             imgObj.setAttribute("width", "36px")
             imgDivObj.appendChild(imgObj)

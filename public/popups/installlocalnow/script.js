@@ -30,12 +30,11 @@ function Pop() {
 
             imgDivObj = document.createElement("DIV")
             imgObj = document.createElement("IMG")
-            // imgObj.setAttribute("src", "./popup-generator/logo-image/install-local-now.png")
             imgObj.setAttribute(
                 "src",
                 content.image == "example-image.png"
                     ? "./popup-generator/logo-image/install-local-now.png"
-                    : `./uploads/${content.image}`,
+                    : `${content.image}`,
             )
             imgObj.style.width =
                 content.size == "large"

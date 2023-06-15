@@ -23,9 +23,7 @@ export const InstallLocalNow = (props: Props) => {
                             src={
                                 state.imageFileName == "example-image.png"
                                     ? imgSource
-                                    : ORIGIN_ADDRESS +
-                                      "/uploads/" +
-                                      state.imageFileName
+                                    : state.imageFileName
                             }
                             alt="image"
                             width={

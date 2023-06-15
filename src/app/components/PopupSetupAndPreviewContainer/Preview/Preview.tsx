@@ -12,7 +12,7 @@ type Props = {}
 
 export const Preview = (props: Props) => {
     const uploadState = useUploadState()
-    const [showed, setIsShowed] = useState(true)
+    const [showed, setIsShowed] = useState(false)
     return (
         <>
             <div

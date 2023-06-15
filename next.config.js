@@ -2,7 +2,7 @@
 const nextConfig = {
     reactStrictMode: true,
     images: {
-        domains: ["localhost"], // <== Domain name
+        domains: ["localhost", "uploadthing.com"], // <== Domain name
     },
 }
 

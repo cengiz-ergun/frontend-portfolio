@@ -40,9 +40,7 @@ export const SecurityCode = (props: Props) => {
                             src={
                                 state.logoFileName == "example-logo.svg"
                                     ? iconSource
-                                    : ORIGIN_ADDRESS +
-                                      "/uploads/" +
-                                      state.logoFileName
+                                    : state.logoFileName
                             }
                             width={36}
                             height={44}
