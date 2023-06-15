@@ -1,9 +1,9 @@
-// export const ORIGIN_ADDRESS =
-//     typeof window !== "undefined" && window.location.origin
-//         ? window.location.origin
-//         : ""
+export const ORIGIN_ADDRESS =
+    typeof window !== "undefined" && window.location.origin
+        ? window.location.origin
+        : ""
 
-export const ORIGIN_ADDRESS = "https://frontend-portfolio-cengiz-ergun.vercel.app/"
+// export const ORIGIN_ADDRESS = "https://frontend-portfolio-cengiz-ergun.vercel.app/"
 // export const ORIGIN_ADDRESS = "https://localhost:3000/"
 
 export const ITEM_PER_PAGINATION = 12

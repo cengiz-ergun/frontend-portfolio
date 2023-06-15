@@ -1,21 +1,20 @@
 "use client"
 
 import Image from "next/image"
+import axios from "axios"
 import React, { useRef } from "react"
 import imageOrLogoSource from "@root/public/popup-generator/logo-image/upload-logo-image.svg"
 import { ORIGIN_ADDRESS } from "@root/src/app/constants/Constants"
-import {
-    usePopupStateDispatch,
-} from "@root/src/app/context/PopupState/PopupState"
-// import Swal from "sweetalert2"
-// import withReactContent from "sweetalert2-react-content"
+import { usePopupStateDispatch } from "@root/src/app/context/PopupState/PopupState"
+import Swal from "sweetalert2"
+import withReactContent from "sweetalert2-react-content"
 import { useUploadStateSet } from "@root/src/app/context/UploadState/UploadStateContext"
 
 type Props = {
     imageOrLogo: "logo" | "image"
 }
 
-// const MySwal = withReactContent(Swal)
+const MySwal = withReactContent(Swal)
 
 export const UploadLogoImage = (props: Props) => {
     const dispatchPopupState = usePopupStateDispatch()
@@ -31,34 +30,34 @@ export const UploadLogoImage = (props: Props) => {
             const file = e.target.files[0] as File
             var form = new FormData()
             form.append("file", file)
-            const response: Response = await fetch(
-                (ORIGIN_ADDRESS + "/api/file"),
-                {
-                    method: "POST",
-                    body: form,
-                },
-            )
-            if (response.ok) {
-                dispatchPopupState({
-                    type: "popup_state_property_changed",
-                    payload: file.name,
-                    property:
-                        props.imageOrLogo == "logo"
-                            ? "logoFileName"
-                            : "imageFileName", //risky
-                })
-                setUploadState("passive")
-                return
-            }
 
-            var result = await response.json()
-            var message = result.message
-            setUploadState("passive")
-            // MySwal.fire({
-            //     icon: 'error',
-            //     title: message,
-            //     showCloseButton: true,
-            // })
+            const axiosResponse = await axios
+                .post(ORIGIN_ADDRESS + "/api/file", form, {
+                    headers: {
+                        "Content-Type": "multipart/form-data",
+                    },
+                })
+                .then((response) => {
+                    console.log(response)
+                    dispatchPopupState({
+                        type: "popup_state_property_changed",
+                        payload: file.name,
+                        property:
+                            props.imageOrLogo == "logo"
+                                ? "logoFileName"
+                                : "imageFileName", //risky
+                    })
+                    setUploadState("passive")
+                    return
+                })
+                .catch((error) => {
+                    setUploadState("passive")
+                    MySwal.fire({
+                        icon: "error",
+                        title: error.response.data.message,
+                        showCloseButton: true,
+                    })
+                })
         }
     }
     return (

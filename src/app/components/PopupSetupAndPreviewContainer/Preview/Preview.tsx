@@ -11,7 +11,7 @@ import { CoverAsPleaseWait } from "@root/src/app/helper/CoverAsPleaseWait"
 type Props = {}
 
 export const Preview = (props: Props) => {
-    // const uploadState = useUploadState()
+    const uploadState = useUploadState()
     const [showed, setIsShowed] = useState(true)
     return (
         <>
@@ -21,11 +21,11 @@ export const Preview = (props: Props) => {
                     showed ? "fixed z-50 inset-0 w-full h-screen" : ""
                 } lg:z-auto lg:sticky lg:top-1 lg:bottom-1 lg:flex bg-gray-50 lg:w-full lg:h-screen lg:mt-24 lg:border-2 lg:border-solid`}
             >
-                {/* {
+                {
                     uploadState == "active" && (
                         <CoverAsPleaseWait />
                     )
-                } */}
+                }
                 <div className="lg:hidden z-50 fixed right-5 top-10 w-fit">
                     <Image
                         className="cursor-pointer"
