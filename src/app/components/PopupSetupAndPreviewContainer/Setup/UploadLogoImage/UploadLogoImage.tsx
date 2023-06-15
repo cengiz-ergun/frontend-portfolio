@@ -1,16 +1,17 @@
 "use client"
 
-var path = require('path');
+var path = require("path")
 
 import Image from "next/image"
 import axios from "axios"
-import React, { useRef } from "react"
+import React, { useRef, useState } from "react"
 import imageOrLogoSource from "@root/public/popup-generator/logo-image/upload-logo-image.svg"
 import { ORIGIN_ADDRESS } from "@root/src/app/constants/Constants"
 import { usePopupStateDispatch } from "@root/src/app/context/PopupState/PopupState"
 import Swal from "sweetalert2"
 import withReactContent from "sweetalert2-react-content"
 import { useUploadStateSet } from "@root/src/app/context/UploadState/UploadStateContext"
+import { CoverAsNotImplemented } from "@root/src/app/helper/CoverAsNotImplemented"
 
 type Props = {
     imageOrLogo: "logo" | "image"
@@ -19,6 +20,8 @@ type Props = {
 const MySwal = withReactContent(Swal)
 
 export const UploadLogoImage = (props: Props) => {
+    const [swtch, setSwtch] = useState(false)
+
     const dispatchPopupState = usePopupStateDispatch()
     const setUploadState = useUploadStateSet()
 
@@ -63,7 +66,14 @@ export const UploadLogoImage = (props: Props) => {
         }
     }
     return (
-        <div className="relative w-full flex flex-col gap-5 justify-center items-center px-16 py-8 rounded-xl border border-dashed border-upload-logo-image-border">
+        <div
+            className="relative w-full flex flex-col gap-5 justify-center items-center px-16 py-8 rounded-xl border border-dashed border-upload-logo-image-border"
+            onMouseEnter={() => setSwtch(true)}
+            onMouseLeave={() => setSwtch(false)}
+        >
+            {swtch && (
+                <CoverAsNotImplemented message="File upload isn't implemented yet. " />
+            )}
             <div
                 className="p-6 bg-purple-50 cursor-pointer rounded-xl"
                 onClick={() => onFileUploadClick()}

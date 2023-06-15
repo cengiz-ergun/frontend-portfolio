@@ -34,7 +34,7 @@ export async function POST(req: NextRequest) {
     )
   }
 
-  const destinationDirPath = path.join("tmp");
+  const destinationDirPath = path.join("public","uploads");
 
   const fileArrayBuffer = await file.arrayBuffer();
 
