@@ -20,10 +20,10 @@
             }
         ],
         "paths": {
-            // "@/*": ["./src/*"],
-            // "@/public/*": ["./public/*"]
             "@root/*": ["./*"],
-            "@popUpGeneratorConstants/*": ["./src/app/popupgenerator/constants/*"]
+            "@popUpGeneratorConstants/*": ["./src/app/constants/*"],
+            "@types": ["./src/app/types/types.ts"]
+
         }
     },
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/popupgenerator/context/PaginationCount/PaginationCountContext.tsx", "src/app/popupgenerator/components/PopupSetupAndPreviewContainer/Setup/CodeOnButtonClick/CodeOnButtonClick.tsx"],

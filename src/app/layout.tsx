@@ -1,17 +1,11 @@
 import { Analytics } from "@vercel/analytics/react"
+import "./sass/globals.scss"
 
-import Script from "next/script"
-import Head from "next/head"
-import "./globals.css"
-
-import { Inter } from "next/font/google"
-
-const inter = Inter({ subsets: ["latin"] })
-
-export const metadata = {
-    title: "Cengiz's Portfolio",
-    description: "Cengiz Ergün",
-}
+import { PaginationCountProvider } from "./context/PaginationCount"
+import { PaginationSelectionProvider } from "./context/PaginationSelection"
+import { PopupSelectionProvider } from "./context/PopupSelection"
+import { PopupStateProvider } from "./context/PopupState"
+import { UploadStateProvider } from "./context/UploadState/UploadStateContext"
 
 export default function RootLayout({
     children,
@@ -20,17 +14,26 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <Head>
-                {/* <link
-                    rel="stylesheet"
-                    href="https://unpkg.com/flowbite@1.4.5/dist/flowbite.min.css"
-                /> */}
-            </Head>
-            <body className={inter.className}>
-                {children}
+            <body>
+                <PaginationCountProvider>
+                    <PaginationSelectionProvider>
+                        <PopupSelectionProvider>
+                            <PopupStateProvider>
+                                <UploadStateProvider>
+                                    <section>{children}</section>
+                                </UploadStateProvider>
+                            </PopupStateProvider>
+                        </PopupSelectionProvider>
+                    </PaginationSelectionProvider>
+                </PaginationCountProvider>
+
                 <Analytics />
-                {/* <script src="https://unpkg.com/flowbite@1.4.5/dist/flowbite.js"></script> */}
-                {/* <Script
+            </body>
+        </html>
+    )
+}
+{
+    /* <Script
                     type="text/javascript"
                     src="/popups/securitycode/script.js"
                     strategy="beforeInteractive"
@@ -49,8 +52,5 @@ export default function RootLayout({
                                 content5: "Continue"
                             }})
                       `}
-                </Script> */}
-            </body>
-        </html>
-    )
+                </Script> */
 }
