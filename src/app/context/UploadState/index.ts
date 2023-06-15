@@ -1,1 +1,1 @@
-export { UploadStateContext } from './UploadStateContext'
+export { UploadStateProvider } from './UploadStateContext'
