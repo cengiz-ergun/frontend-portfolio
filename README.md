@@ -1,34 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
--   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
--   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Details
+- :heavy_check_mark: In the first step, users need to select a particular template from the grid of different styles. This selection will allow them to proceed to the next step.
+- :heavy_check_mark: In the second step, users must choose the size of the popup, select a color, and upload the product logo.
+- :heavy_check_mark: In the third step, users need to customize the popup content according to their preferences. The fields should be modified based on the existing fields within the selected popup.
+        All changes made should be reflected in the preview section located beside the third step. The preview should sync with every modification in the popups.
+- [ ] In the fourth step, users are required to select the device type on which the popups will appear.
+    Users can configure their popups to be displayed based on the source from which visitors are coming and specific browser languages. Multiple languages can be added.
+        All audience settings can be switched on/off using a toggle.
+- [ ] In the fifth step, users must define visitor behavior to determine when the popups will be shown.
+        They need to specify the number of seconds after which the popups will appear, set a scroll percentage threshold that triggers a popup campaign when the user scrolls a certain percentage of a webpage, and decide on the exit intent that displays the popups when a visitor moves the cursor towards the exit button. The exit intent feature is only available for desktop campaigns.
+        All behavior settings can be switched on/off using a toggle.
+        Behavior settings should work independently, meaning if the user selects a 5-second delay and a 50% scroll threshold, the popup should be triggered in either case.
+        The frequency of the popups appearing can be preset. All popups will appear once in every session and stop displaying after users click the close button or submit any data to the popups.
+- [ ] In the final step, users must be able to send the collected data from the popups through a Webhook. Required system variables from the Webhook include form input variables, date and time, browser language and name, operating system, and device type (mobile or desktop).
+        Users can create a Webhook endpoint with make.com to test it.
+        The submission fields and click data names in the popups must be the same, and they should be selected as default values if used in the popups.
+    Users should receive the necessary assets to display the modal in the UI.
+        This includes HTML code to embed on the website, a modal div code with all components styled using Tailwind CSS.
+        They should also receive a hosted script that will trigger the modal based on the given conditions.
+        The selected trigger configurations should be provided as parameters in that script.
