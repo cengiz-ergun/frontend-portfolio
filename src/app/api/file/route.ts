@@ -47,7 +47,6 @@ export async function POST(req: NextRequest) {
   );
 
   return NextResponse.json({
-    fileName: file.name,
-    size: file.size
+    status: 200,
   });
 }

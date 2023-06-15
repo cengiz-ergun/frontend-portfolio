@@ -32,9 +32,7 @@ export const UploadLogoImage = (props: Props) => {
             const file = e.target.files[0] as File
             var form = new FormData()
             form.append("file", file)
-
             var url = path.join("api", "file")
-            console.log(url)
             const axiosResponse = await axios
                 .post(url, form, {
                     headers: {
@@ -60,6 +58,7 @@ export const UploadLogoImage = (props: Props) => {
                         title: error.response.data.message,
                         showCloseButton: true,
                     })
+                    return
                 })
         }
     }
