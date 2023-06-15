@@ -32,7 +32,7 @@ export const UploadLogoImage = (props: Props) => {
             var form = new FormData()
             form.append("file", file)
             const response: Response = await fetch(
-                ORIGIN_ADDRESS + "/api/file",
+                (ORIGIN_ADDRESS + "/api/file"),
                 {
                     method: "POST",
                     body: form,
