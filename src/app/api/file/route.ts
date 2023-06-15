@@ -34,7 +34,7 @@ export async function POST(req: NextRequest) {
     )
   }
 
-  const destinationDirPath = path.join("public","uploads");
+  const destinationDirPath = path.join("tmp");
 
   const fileArrayBuffer = await file.arrayBuffer();
 
@@ -42,11 +42,12 @@ export async function POST(req: NextRequest) {
     await fs.mkdir(destinationDirPath, { recursive: true });
   }
   await fs.writeFile(
-    path.join(destinationDirPath, "random.svg"),
+    path.join(destinationDirPath, file.name),
     Buffer.from(fileArrayBuffer)
   );
 
   return NextResponse.json({
-    fileName: "random.svg"
+    fileName: file.name,
+    size: file.size
   });
 }
