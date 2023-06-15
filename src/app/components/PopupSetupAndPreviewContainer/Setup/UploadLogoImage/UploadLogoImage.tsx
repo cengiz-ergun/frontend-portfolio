@@ -7,15 +7,15 @@ import { ORIGIN_ADDRESS } from "@root/src/app/constants/Constants"
 import {
     usePopupStateDispatch,
 } from "@root/src/app/context/PopupState/PopupState"
-import Swal from "sweetalert2"
-import withReactContent from "sweetalert2-react-content"
+// import Swal from "sweetalert2"
+// import withReactContent from "sweetalert2-react-content"
 import { useUploadStateSet } from "@root/src/app/context/UploadState/UploadStateContext"
 
 type Props = {
     imageOrLogo: "logo" | "image"
 }
 
-const MySwal = withReactContent(Swal)
+// const MySwal = withReactContent(Swal)
 
 export const UploadLogoImage = (props: Props) => {
     const dispatchPopupState = usePopupStateDispatch()
@@ -54,11 +54,11 @@ export const UploadLogoImage = (props: Props) => {
             var result = await response.json()
             var message = result.message
             setUploadState("passive")
-            MySwal.fire({
-                icon: 'error',
-                title: message,
-                showCloseButton: true,
-            })
+            // MySwal.fire({
+            //     icon: 'error',
+            //     title: message,
+            //     showCloseButton: true,
+            // })
         }
     }
     return (
