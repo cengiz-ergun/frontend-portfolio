@@ -1,3 +1,5 @@
+// Currently these route isn't being used because vercel doesn't allow to upload image to the server directly in production.
+// For active route for uploading -> src/app/api/uploadthing/route.ts
 import { NextRequest, NextResponse } from "next/server";
 import { existsSync } from "fs";
 import fs from "fs/promises";

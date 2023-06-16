@@ -1,24 +1,18 @@
 "use client"
 
-var path = require("path")
-
 import { UploadButton } from "@uploadthing/react"
 
 import { OurFileRouter } from "@root/src/app/api/uploadthing/core"
 
 import Image from "next/image"
-import axios from "axios"
-import React, { useEffect, useRef, useState } from "react"
+import React, { useEffect } from "react"
 import imageOrLogoSource from "@root/public/popup-generator/logo-image/upload-logo-image.svg"
-import { ORIGIN_ADDRESS } from "@root/src/app/constants/Constants"
 import {
-    usePopupState,
     usePopupStateDispatch,
 } from "@root/src/app/context/PopupState/PopupState"
 import Swal from "sweetalert2"
 import withReactContent from "sweetalert2-react-content"
 import { useUploadStateSet } from "@root/src/app/context/UploadState/UploadStateContext"
-import { CoverAsNotImplemented } from "@root/src/app/helper/CoverAsNotImplemented"
 
 type Props = {
     imageOrLogo: "logo" | "image"
@@ -89,6 +83,7 @@ export const UploadLogoImage = (props: Props) => {
     return (
         <div className="relative w-full flex flex-col gap-5 justify-center items-center px-16 py-8 rounded-xl border border-dashed border-upload-logo-image-border">
             <div
+                data-test-id="click-for-upload"
                 className="p-6 bg-purple-50 cursor-pointer rounded-xl"
                 onClick={() => onFileUploadClick()}
             >

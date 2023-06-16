@@ -16,6 +16,7 @@ export interface IPopup{
     webhookUrl: string
     contents: object // Mandatory in real classes
 
+    // Initially these are file names which are available in public directory. When user upload new photo or logo, they become file URL
     logoFileName?: string 
     imageFileName?: string
 }

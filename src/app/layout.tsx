@@ -32,25 +32,3 @@ export default function RootLayout({
         </html>
     )
 }
-{
-    /* <Script
-                    type="text/javascript"
-                    src="/popups/securitycode/script.js"
-                    strategy="beforeInteractive"
-                />
-                <Script>
-                    {`
-                        window.start.init({
-                            size: "small",
-                            position: "bottom-left",
-                            color: "red",
-                            contents: {
-                                content1: "Security Code",
-                                content2: "This code expires in 24 hours",
-                                content3: "Code",
-                                content4: "Cancel",
-                                content5: "Continue"
-                            }})
-                      `}
-                </Script> */
-}

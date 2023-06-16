@@ -1,5 +1,5 @@
 {
-    "name": "frontend-portfolio",
+    "name": "popup-generator",
     "version": "0.1.0",
     "private": true,
     "scripts": {
@@ -8,7 +8,8 @@
         "start": "next start",
         "lint": "next lint",
         "format": "prettier --check --ignore-path .gitignore .",
-        "format:fix": "prettier --write --ignore-path .gitignore ."
+        "format:fix": "prettier --write --ignore-path .gitignore .",
+        "cypress:open": "cypress open"
     },
     "dependencies": {
         "@types/node": "20.2.5",
@@ -44,6 +45,7 @@
         "uuid": "^9.0.0"
     },
     "devDependencies": {
+        "cypress": "^12.14.0",
         "prettier": "^2.8.8"
     }
 }

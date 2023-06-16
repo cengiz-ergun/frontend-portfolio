@@ -6,7 +6,10 @@ import { PopupSetupAndPreviewContainer } from "./components/PopupSetupAndPreview
 
 export const metadata: Metadata = {
     title: "Popup Generator",
-    description: "Powered by Popup Generator"
+    description: "Powered by Popup Generator",
+    icons: {
+        icon: "./favicon.png"
+    }
 }
 
 export default function Home() {
