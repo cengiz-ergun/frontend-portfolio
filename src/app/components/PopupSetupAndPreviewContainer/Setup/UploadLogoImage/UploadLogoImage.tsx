@@ -35,51 +35,17 @@ export const UploadLogoImage = (props: Props) => {
             })
     }, [])
 
+    // Are there any behaviour differences between cypress(chrome) and real chrome? if commented out that code, it succesfully work in cypress browser but not real browser.
+    // Step 2 // For production, that is must
     if (typeof window !== "undefined") {
+        // Step 1 // For local, that code is enough
         item = document.getElementsByClassName("ut-hidden")[0]
     }
 
     const onFileUploadClick = () => {
-        // inputFile.current?.click()
-
         item.click()
     }
-    // const onFileUploadChangeHandler = async (e: any) => {
-    //     setUploadState("active")
-    //     if (e.target.files && e.target.files[0]) {
-    //         const file = e.target.files[0] as File
-    //         var form = new FormData()
-    //         form.append("file", file)
-    //         var url = path.join("api", "file")
-    //         const axiosResponse = await axios
-    //             .post(url, form, {
-    //                 headers: {
-    //                     "Content-Type": "multipart/form-data",
-    //                 },
-    //             })
-    //             .then((response) => {
-    //                 dispatchPopupState({
-    //                     type: "popup_state_property_changed",
-    //                     payload: file.name,
-    //                     property:
-    //                         props.imageOrLogo == "logo"
-    //                             ? "logoFileName"
-    //                             : "imageFileName", //risky
-    //                 })
-    //                 setUploadState("passive")
-    //                 return
-    //             })
-    //             .catch((error) => {
-    //                 setUploadState("passive")
-    //                 MySwal.fire({
-    //                     icon: "error",
-    //                     title: error.response.data.message,
-    //                     showCloseButton: true,
-    //                 })
-    //                 return
-    //             })
-    //     }
-    // }
+
     return (
         <div className="relative w-full flex flex-col gap-5 justify-center items-center px-16 py-8 rounded-xl border border-dashed border-upload-logo-image-border">
             <div
@@ -88,14 +54,7 @@ export const UploadLogoImage = (props: Props) => {
                 onClick={() => onFileUploadClick()}
             >
                 <Image src={imageOrLogoSource} alt="Upload-logo-image" />
-                {/* <input
-                    type="file"
-                    id="file"
-                    ref={inputFile}
-                    style={{ display: "none" }}
-                    onChange={(e) => onFileUploadChangeHandler(e)}
-                /> */}
-                <div style={{ display: "none" }}>
+                <div className="invisible w-0 h-0">
                     <UploadButton<OurFileRouter>
                         endpoint="imageUploader"
                         onClientUploadComplete={(res) => {

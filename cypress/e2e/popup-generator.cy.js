@@ -3,15 +3,36 @@ context("popup generator", () => {
     beforeEach(() => {
         cy.visit("http://localhost:3000")
         cy.viewport(1366, 768)
-
     })
 
-    // it('.click() - click first pagination element', () => {
-    //     cy.get('[data-test-id="pagination-item-1"]').click({force: true})
-    // })
-
-    it('.click() - two times image uploading subsequently', () => {
-        // cy.get('[data-test-id="click-for-upload"]').click({force: true})
-        // cy.get('[data-test-id="click-for-upload"]').selectFile('cypress/fixtures/reactjs-ar21.svg')
+    it(".click() - uploading images subsequently", () => {
+        cy.get(".ut-hidden").selectFile("cypress/fixtures/reactjs-ar21.svg", {
+            force: true,
+        })
+        cy.wait(12000)
+        cy.get('img').then($elements => {
+            const matchedElements = $elements.filter((index, element) => {
+              const src = element.getAttribute('src');
+              const regex = /(?:\w+\.)?reactjs-ar21\.svg/;
+              return regex.test(src);
+            });
+            if(matchedElements.length == 0){
+                throw new Error("first image didn't uploaded")
+            }
+          });
+          cy.get(".ut-hidden").selectFile("cypress/fixtures/logo-javascript.svg", {
+            force: true,
+        })
+        cy.wait(12000)
+        cy.get('img').then($elements => {
+            const matchedElements = $elements.filter((index, element) => {
+              const src = element.getAttribute('src');
+              const regex = /(?:\w+\.)?logo-javascript\.svg/;
+              return regex.test(src);
+            });
+            if(matchedElements.length == 0){
+                throw new Error("second image didn't uploaded")
+            }
+          });
     })
 })
