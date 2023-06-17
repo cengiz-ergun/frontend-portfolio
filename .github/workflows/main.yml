@@ -6,8 +6,8 @@ jobs:
   cypress-run:
     runs-on: ubuntu-22.04
     steps:
-      - name: Make envfile
-        uses: SpicyPizza/create-envfile@v1
+      - name: Dotenv Action
+        uses: falti/dotenv-action@v1.0.4    
         with:
           UPLOADTHING_SECRET: ${{ secrets.UPLOADTHING_SECRET }}
       - name: Checkout
