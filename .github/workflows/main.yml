@@ -9,7 +9,7 @@ jobs:
       - name: Dotenv Action
         uses: falti/dotenv-action@v1.0.4    
         with:
-          UPLOADTHING_SECRET: ${{ secrets.UPLOADTHING_SECRET }}
+          export-variables: ${{ secrets.UPLOADTHING_SECRET }}
       - name: Checkout
         uses: actions/checkout@v3
       # Install NPM dependencies, cache them correctly
