@@ -6,16 +6,14 @@ jobs:
   cypress-run:
     runs-on: ubuntu-22.04
     steps:
-      - name: Dotenv Action
-        uses: falti/dotenv-action@v1.0.4    
-        with:
-          export-variables: ${{ secrets.UPLOADTHING_SECRET }}
       - name: Checkout
         uses: actions/checkout@v3
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
-        uses: cypress-io/github-action@v5       
+        uses: cypress-io/github-action@v5 
+        env:
+          UPLOADTHING_SECRET: ${{ secrets.UPLOADTHING_SECRET }}      
         with:
           build: npm run build
           start: npm start
