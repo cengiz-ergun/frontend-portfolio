@@ -1,3 +1,6 @@
+# Popup Generator
+This application is inspired from [popupsmart](https://popupsmart.com/).
+
 ## Details
 - :heavy_check_mark: In the first step, users need to select a particular template from the grid of different styles. This selection will allow them to proceed to the next step.
 - :heavy_check_mark: In the second step, users must choose the size of the popup, select a color, and upload the product logo.
