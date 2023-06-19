@@ -13,6 +13,7 @@ export const Color = (props: Props) => {
     const dispatch = usePopupStateDispatch()
 
     const currentColor = state["color"]
+    console.log(state["color"])
     return (
         // <div>{props.colorName}</div>
         <div

@@ -7,7 +7,7 @@ export interface IPopup{
     position: 'top-left' | 'top-center' | 'top-right' |
               'middle-left' | 'middle-center' | 'middle-right' |
               'bottom-left' | 'bottom-center' | 'bottom-right';   
-    color: 'blue' | 'green' | 'purple' | 'red' | 'yellow';
+    color: '#000000' | '#F37C34' | '#777777' | '#4287f5' | '#42f563';
     visitorDevice: 'mobile' | 'desktop' | 'mobile&desktop';
     afterXSeconds: number;
     afterPercentScroll: number;
@@ -28,7 +28,7 @@ abstract class Popup implements IPopup {
     position: 'top-left' | 'top-center' | 'top-right' |
     'middle-left' | 'middle-center' | 'middle-right' |
     'bottom-left' | 'bottom-center' | 'bottom-right';   
-    color: 'blue' | 'green' | 'purple' | 'red' | 'yellow';
+    color: '#000000' | '#F37C34' | '#777777' | '#4287f5' | '#42f563';
     visitorDevice: 'mobile' | 'desktop' | 'mobile&desktop';
     afterXSeconds: number;
     afterPercentScroll: number;
@@ -41,7 +41,7 @@ abstract class Popup implements IPopup {
     constructor() {
         this.size = "medium"
         this.position = "middle-center"
-        this.color = "blue"
+        this.color = "#777777"
         this.visitorDevice = "desktop"
         this.afterXSeconds = 0
         this.afterPercentScroll = 0

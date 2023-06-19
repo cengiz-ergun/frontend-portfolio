@@ -11,7 +11,7 @@ function Pop() {
     let content = {
         size: "medium",
         position: "middle-center",
-        color: "purple",
+        color: "#777777",
         logo: "example-logo.svg",
         contents: {
             content1: "Security Code",

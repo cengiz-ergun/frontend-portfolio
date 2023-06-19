@@ -11,7 +11,7 @@ function Pop() {
     let content = {
         size: "medium",
         position: "middle-center",
-        color: "purple",
+        color: "#777777",
         image: "example-image.png",        
         contents: {
             content1: "Install local now",
