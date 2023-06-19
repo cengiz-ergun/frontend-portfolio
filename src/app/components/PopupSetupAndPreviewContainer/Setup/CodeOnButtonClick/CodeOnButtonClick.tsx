@@ -21,14 +21,14 @@ export const CodeOnButtonClick = (props: Props) => {
 
     const code =
         selectedId == 1
-            ? `<script type="text/javascript" src="${ORIGIN_ADDRESS}/popups/securitycode/script.js"></script><script> window.start.init({ size: "${state.size}", position: "${state.position}", color: "${state.color}", logo: "${state.logoFileName}", afterXSeconds: "${state.afterXSeconds}", contents: {
+            ? `<script type="text/javascript" src="${ORIGIN_ADDRESS}/popups/securitycode/script.js"></script><script> window.start.init({ size: "${state.size}", position: "${state.position}", color: "${state.color}", logo: "${state.logoFileName}", afterXSeconds: "${state.afterXSeconds}", afterPercentScroll: "${state.afterPercentScroll}", contents: {
         content1: "${state.contents.content1}",
         content2: "${state.contents.content2}",
         content3: "${state.contents.content3}",
         content4: "${state.contents.content4}",
         content5: "${state.contents.content5}"
     }})</script>`
-            : `<script type="text/javascript" src="${ORIGIN_ADDRESS}/popups/installlocalnow/script.js"></script><script> window.start.init({ size: "${state.size}", position: "${state.position}", color: "${state.color}", image: "${state.imageFileName}", afterXSeconds: "${state.afterXSeconds}", contents: {
+            : `<script type="text/javascript" src="${ORIGIN_ADDRESS}/popups/installlocalnow/script.js"></script><script> window.start.init({ size: "${state.size}", position: "${state.position}", color: "${state.color}", image: "${state.imageFileName}", afterXSeconds: "${state.afterXSeconds}", afterPercentScroll: "${state.afterPercentScroll}",contents: {
         content1: "${state.contents.content1}",
         content2: "${state.contents.content2}",
         content3: "${state.contents.content3}",

@@ -10,6 +10,7 @@ type Props = {
     stateKey: string
     stateValue?: string
     toggleState: ToggleState
+    inputType: "Number" | "String"
 }
 
 export const InputForTargeting = (props: Props) => {
@@ -25,12 +26,13 @@ export const InputForTargeting = (props: Props) => {
             }
             value={props.stateValue}
             onChange={(e) => {
-                if (!isNaN(e.target.value as any)) {
+                if (props.inputType == "Number" && !isNaN(e.target.value as any)) {
                     dispatch({
                         type: "popup_state_property_changed",
                         property: props.stateKey,
                         payload: e.target.value,
                     })
+                    return
                 }
             }}
         />

@@ -10,7 +10,7 @@ export interface IPopup{
     color: '#000000' | '#F37C34' | '#777777' | '#4287f5' | '#42f563';
     visitorDevice: 'mobile' | 'desktop' | 'mobile&desktop';
     afterXSeconds: string;
-    afterPercentScroll: number;
+    afterPercentScroll: string;
     trafficSource: string;
     exitIntentTargeting: boolean;
     webhookUrl: string
@@ -31,7 +31,7 @@ abstract class Popup implements IPopup {
     color: '#000000' | '#F37C34' | '#777777' | '#4287f5' | '#42f563';
     visitorDevice: 'mobile' | 'desktop' | 'mobile&desktop';
     afterXSeconds: string;
-    afterPercentScroll: number;
+    afterPercentScroll: string;
     trafficSource: string;
     exitIntentTargeting: boolean;
     webhookUrl: string
@@ -44,7 +44,7 @@ abstract class Popup implements IPopup {
         this.color = "#777777"
         this.visitorDevice = "desktop"
         this.afterXSeconds = ""
-        this.afterPercentScroll = 0
+        this.afterPercentScroll = ""
         this.trafficSource = "ExampleTrafficSource"
         this.exitIntentTargeting = false
         this.webhookUrl = "url.example.com"

@@ -14,6 +14,7 @@ function Pop() {
         color: "#777777",
         logo: "example-logo.svg",
         afterXSeconds: "",
+        afterPercentScroll: "",
         contents: {
             content1: "Security Code",
             content2: "This code expires in 24 hours",
@@ -77,12 +78,28 @@ function Pop() {
             conDivObj.appendChild(closeButtonObj)
         }
 
-        if(content.afterXSeconds != ""){
-            setTimeout(() => {
-                document.body.appendChild(conDivObj)
-            }, Number(content.afterXSeconds) * 1000)
+        if (content.afterPercentScroll == "" && content.afterXSeconds == "") {
+            document.body.appendChild(conDivObj)
+        } else {
+            if (content.afterPercentScroll != "") {
+                window.addEventListener("scroll", () => {
+                    var height = document.body.scrollHeight
+                    var y = window.scrollY
+                    if (
+                        y / height >=
+                        Number(content.afterPercentScroll) / 100
+                    ) {
+                        document.body.appendChild(conDivObj)
+                    }
+                })
+            }
+
+            if (content.afterXSeconds != "") {
+                setTimeout(() => {
+                    document.body.appendChild(conDivObj)
+                }, Number(content.afterXSeconds) * 1000)
+            }
         }
-        
     }
 
     this.init = function (param) {
@@ -91,7 +108,10 @@ function Pop() {
             if ("position" in param) content.position = param.position
             if ("color" in param) content.color = param.color
             if ("logo" in param) content.logo = param.logo
-            if ("afterXSeconds" in param) content.afterXSeconds = param.afterXSeconds
+            if ("afterXSeconds" in param)
+                content.afterXSeconds = param.afterXSeconds
+            if ("afterPercentScroll" in param)
+                content.afterPercentScroll = param.afterPercentScroll
             if ("contents" in param && typeof param["contents"] === "object") {
                 if ("content1" in param["contents"])
                     content.contents.content1 = param["contents"]["content1"]

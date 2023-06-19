@@ -8,8 +8,9 @@ import { IPopup } from "@root/src/app/types/types"
 type Props = {
     miniHeader: string
     stateKey: string
-    stateValue?: string
-    placeholder?: string
+    stateValue: string
+    placeholder: string
+    inputType: "Number" | "String"
 }
 
 export const SubSetupForTargeting = (props: Props) => {
@@ -31,6 +32,7 @@ export const SubSetupForTargeting = (props: Props) => {
                 stateValue={props.stateValue}
                 toggleState={toggleState}
                 placeholder={props.placeholder}
+                inputType={props.inputType}
             />
         </div>
     )

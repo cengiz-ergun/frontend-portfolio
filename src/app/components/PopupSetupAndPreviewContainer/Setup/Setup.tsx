@@ -48,8 +48,8 @@ export const Setup = (props: Props) => {
             )}
 
             <SubHead num={4} subHeaderText="Targeting Rules" />
-            <SubSetupForTargeting miniHeader="After X seconds" stateKey="afterXSeconds" stateValue={state.afterXSeconds} placeholder="Enter a number"/>
-
+            <SubSetupForTargeting miniHeader="After X seconds" stateKey="afterXSeconds" stateValue={state.afterXSeconds} placeholder="Enter a number" inputType="Number" />
+            <SubSetupForTargeting miniHeader="After % Scroll" stateKey="afterPercentScroll" stateValue={state.afterPercentScroll} placeholder="Enter a number" inputType="Number" />
 
             <SubHead num={5} subHeaderText="Code" />
             <CodeOnButtonClick />
