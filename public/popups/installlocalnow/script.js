@@ -12,7 +12,8 @@ function Pop() {
         size: "medium",
         position: "middle-center",
         color: "#777777",
-        image: "example-image.png",        
+        image: "example-image.png", 
+        afterXSeconds: "",       
         contents: {
             content1: "Install local now",
             content2: "We've gone native, try it!",
@@ -112,7 +113,11 @@ function Pop() {
             conDivObj.appendChild(closeButtonObj)
         }
 
-        document.body.appendChild(conDivObj)
+        if(content.afterXSeconds != ""){
+            setTimeout(() => {
+                document.body.appendChild(conDivObj)
+            }, Number(content.afterXSeconds) * 1000)
+        }
     }
 
     this.init = function (param) {
@@ -121,6 +126,7 @@ function Pop() {
             if ("position" in param) content.position = param.position
             if ("color" in param) content.color = param.color
             if ("image" in param) content.image = param.image
+            if ("afterXSeconds" in param) content.afterXSeconds = param.afterXSeconds
             if ("contents" in param && typeof param["contents"] === "object") {
                 if ("content1" in param["contents"])
                     content.contents.content1 = param["contents"]["content1"]

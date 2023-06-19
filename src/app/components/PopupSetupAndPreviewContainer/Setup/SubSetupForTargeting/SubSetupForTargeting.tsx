@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from "react"
+import React, { useState } from "react"
 import { Toggle } from "../Toggle"
 import { ToggleState } from "../Toggle/Toggle"
 import { InputForTargeting } from "../InputForTargeting"
@@ -21,7 +21,7 @@ export const SubSetupForTargeting = (props: Props) => {
             <div className="flex flex-row justify-between items-center mb-4 w-full">
                 <div>{props.miniHeader}</div>
                 <Toggle
-                    stateKey={props.stateKey}
+                    stateKey={props.stateKey}                    
                     toggleState={toggleState}
                     setToggleState={setToggleState}
                 />

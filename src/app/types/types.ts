@@ -43,7 +43,7 @@ abstract class Popup implements IPopup {
         this.position = "middle-center"
         this.color = "#777777"
         this.visitorDevice = "desktop"
-        this.afterXSeconds = "6"
+        this.afterXSeconds = ""
         this.afterPercentScroll = 0
         this.trafficSource = "ExampleTrafficSource"
         this.exitIntentTargeting = false

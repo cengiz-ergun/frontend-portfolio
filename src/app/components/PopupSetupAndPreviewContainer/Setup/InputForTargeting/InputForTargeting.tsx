@@ -16,6 +16,7 @@ export const InputForTargeting = (props: Props) => {
     const dispatch = usePopupStateDispatch()
     return (
         <input
+            disabled={props.toggleState == "passive-left"}
             className={`${
                 props.toggleState == "passive-left" ? "bg-black opacity-5" : ""
             } w-full border border-solid border-content-input-border outline-none focus:border-purple-800 rounded-lg h-9 px-2`}
