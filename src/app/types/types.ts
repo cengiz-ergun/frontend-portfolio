@@ -9,7 +9,7 @@ export interface IPopup{
               'bottom-left' | 'bottom-center' | 'bottom-right';   
     color: '#000000' | '#F37C34' | '#777777' | '#4287f5' | '#42f563';
     visitorDevice: 'mobile' | 'desktop' | 'mobile&desktop';
-    afterXSeconds: number;
+    afterXSeconds: string;
     afterPercentScroll: number;
     trafficSource: string;
     exitIntentTargeting: boolean;
@@ -30,7 +30,7 @@ abstract class Popup implements IPopup {
     'bottom-left' | 'bottom-center' | 'bottom-right';   
     color: '#000000' | '#F37C34' | '#777777' | '#4287f5' | '#42f563';
     visitorDevice: 'mobile' | 'desktop' | 'mobile&desktop';
-    afterXSeconds: number;
+    afterXSeconds: string;
     afterPercentScroll: number;
     trafficSource: string;
     exitIntentTargeting: boolean;
@@ -43,7 +43,7 @@ abstract class Popup implements IPopup {
         this.position = "middle-center"
         this.color = "#777777"
         this.visitorDevice = "desktop"
-        this.afterXSeconds = 0
+        this.afterXSeconds = "6"
         this.afterPercentScroll = 0
         this.trafficSource = "ExampleTrafficSource"
         this.exitIntentTargeting = false

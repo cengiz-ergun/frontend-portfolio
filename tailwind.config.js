@@ -66,6 +66,7 @@ module.exports = {
                 codeGeneration: "#333333",
                 "size-selection": "#F5F5F5",
                 "popup-position-selection": "#7D4AEA",
+                "toggle": "#7D4AEA"
             },
             colors: {
                 popUpListItemInnerText: "#7D4AEA",

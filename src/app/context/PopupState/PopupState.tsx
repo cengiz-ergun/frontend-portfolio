@@ -11,7 +11,7 @@ type Props = {
     children: ReactNode
 }
 
-type Action = {
+export type Action = {
     type: string
     payload: string
     property?: string
