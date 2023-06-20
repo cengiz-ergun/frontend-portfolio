@@ -62,9 +62,15 @@ function Pop() {
 
             content4DivObj = document.createElement("DIV")
             button1Obj = document.createElement("BUTTON")
+            button1Obj.addEventListener("click", function (e) {
+                e.currentTarget.parentNode.parentNode.remove()
+            })
             button1Obj.innerText = content.contents.content4
             content4DivObj.appendChild(button1Obj)
             button2Obj = document.createElement("BUTTON")
+            button2Obj.addEventListener("click", function (e) {
+                e.currentTarget.parentNode.parentNode.remove()
+            })
             button2Obj.innerText = content.contents.content5
             button2Obj.style.backgroundColor = content.color
             if (content.webhookUrl != "") {
@@ -72,22 +78,19 @@ function Pop() {
                     const necessaryInfo = getNecessaryInfo()
                     let data = new FormData()
                     data.append("info", JSON.stringify(necessaryInfo))
-                    const fetchResponse = fetch(
-                        `${content.webhookUrl}`,
-                        {
-                            method: "POST",
-                            mode: "no-cors",
-                            headers: {
-                                "Content-Type": "application/json",
-                            },
-                            body: data,
+                    const fetchResponse = fetch(`${content.webhookUrl}`, {
+                        method: "POST",
+                        mode: "no-cors",
+                        headers: {
+                            "Content-Type": "application/json",
                         },
-                    )
+                        body: data,
+                    })
                         .then((response) => {
-                            console.log(response)
+                            // console.log(response)
                         })
                         .catch((error) => {
-                            console.log(error)
+                            // console.log(error)
                         })
                 })
             }
@@ -158,7 +161,7 @@ function Pop() {
                         y / height >=
                         Number(content.afterPercentScroll) / 100
                     ) {
-                        if(!isShowed){
+                        if (!isShowed) {
                             isShowed = true
                             document.body.appendChild(conDivObj)
                         }
@@ -168,7 +171,11 @@ function Pop() {
 
             if (content.afterXSeconds != "") {
                 setTimeout(() => {
-                    document.body.appendChild(conDivObj)
+                    if (!isShowed) {
+                        isShowed = true
+                        document.body.appendChild(conDivObj)
+                    }
+                    // document.body.appendChild(conDivObj)
                 }, Number(content.afterXSeconds) * 1000)
             }
         }
