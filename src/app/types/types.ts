@@ -42,12 +42,12 @@ abstract class Popup implements IPopup {
         this.size = "medium"
         this.position = "middle-center"
         this.color = "#777777"
-        this.visitorDevice = "desktop"
+        this.visitorDevice = "mobile&desktop"
         this.afterXSeconds = ""
         this.afterPercentScroll = ""
-        this.trafficSource = "ExampleTrafficSource"
-        this.exitIntentTargeting = false
-        this.webhookUrl = "url.example.com"
+        this.trafficSource = ""
+        this.exitIntentTargeting = true
+        this.webhookUrl = ""
     }
 }
 

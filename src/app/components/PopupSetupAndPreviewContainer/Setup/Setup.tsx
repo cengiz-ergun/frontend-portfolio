@@ -13,6 +13,7 @@ import { CodeOnButtonClick } from "./CodeOnButtonClick"
 import { SubSetupForTargeting } from "./SubSetupForTargeting"
 import { InputForTargeting } from "./InputForTargeting"
 import { IPopup } from "@root/src/app/types/types"
+import { WebhookSettings } from "./WebhookSettings"
 
 type Props = {}
 
@@ -50,8 +51,11 @@ export const Setup = (props: Props) => {
             <SubHead num={4} subHeaderText="Targeting Rules" />
             <SubSetupForTargeting miniHeader="After X seconds" stateKey="afterXSeconds" stateValue={state.afterXSeconds} placeholder="Enter a number" inputType="Number" />
             <SubSetupForTargeting miniHeader="After % Scroll" stateKey="afterPercentScroll" stateValue={state.afterPercentScroll} placeholder="Enter a number" inputType="Number" />
+            {/* <SubSetupForTargeting miniHeader="Traffic Source" stateKey="trafficSource" stateValue={state.trafficSource} placeholder="Enter your traffic source domain" inputType="String" /> */}
 
-            <SubHead num={5} subHeaderText="Code" />
+            <SubHead num={5} subHeaderText="Settings and Code" />
+            {/* Webhook settings */}
+            <WebhookSettings />
             <CodeOnButtonClick />
         </div>
     )

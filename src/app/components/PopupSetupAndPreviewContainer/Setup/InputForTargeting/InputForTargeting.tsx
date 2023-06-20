@@ -33,6 +33,12 @@ export const InputForTargeting = (props: Props) => {
                         payload: e.target.value,
                     })
                     return
+                } else if(props.inputType == "String"){
+                    dispatch({
+                        type: "popup_state_property_changed",
+                        property: props.stateKey,
+                        payload: e.target.value,
+                    })
                 }
             }}
         />

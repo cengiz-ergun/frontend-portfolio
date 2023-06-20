@@ -15,7 +15,7 @@ type Props = {
 
 export const SubSetupForTargeting = (props: Props) => {
     const state = usePopupState() as IPopup
-    console.log(state)
+    // console.log(state)
     const [toggleState, setToggleState] = useState<ToggleState>("active-right")
     return (
         <div className="mb-8">
