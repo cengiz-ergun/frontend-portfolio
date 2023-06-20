@@ -1,15 +1,27 @@
 # Popup Generator
 This application is inspired from [popupsmart](https://popupsmart.com/).
 
+## Tech
+[Next.js](https://nextjs.org/) - The React Framework <br />
+[Vercel](https://vercel.com/) - Deployment&Hosting <br />
+[Tailwindcss](https://tailwindcss.com/) - A utility-first CSS framework <br />
+[Github Actions](https://github.com/features/actions) - For CI-CD platform <br />
+[Cypress](https://www.cypress.io/) - For e2e test <br />
+[Context API and Reducer](https://react.dev/learn/scaling-up-with-reducer-and-context) - For managing state <br />
+[Uploadthing](https://uploadthing.com/) - For uploading images
+ 
+
 ## Details
-- :heavy_check_mark: In the first step, users need to select a particular template from the grid of different styles. This selection will allow them to proceed to the next step.
-- :heavy_check_mark: In the second step, users must choose the size of the popup, select a color, and upload the product logo.
-- :heavy_check_mark: In the third step, users need to customize the popup content according to their preferences. The fields should be modified based on the existing fields within the selected popup.
-        All changes made should be reflected in the preview section located beside the third step. The preview should sync with every modification in the popups.
+ :heavy_check_mark: In the first step, users need to select a particular template from the grid of different styles. This selection will allow them to proceed to the next step.<br />
+ :heavy_check_mark: In the second step, users must choose the size of the popup, select a color, and upload the product logo.<br />
+ :heavy_check_mark: In the third step, users need to customize the popup content according to their preferences. The fields should be modified based on the existing fields within the selected popup.
+        All changes made should be reflected in the preview section located beside the third step. The preview should sync with every modification in the popups.<br />
+        
 - [ ] In the fourth step, users are required to select the device type on which the popups will appear.
     Users can configure their popups to be displayed based on the source from which visitors are coming and specific browser languages. Multiple languages can be added.
-        All audience settings can be switched on/off using a toggle.
-- [ ] In the fifth step, users must define visitor behavior to determine when the popups will be shown.
+        All audience settings can be switched on/off using a toggle.<br />
+        
+:heavy_check_mark: In the fifth step, users must define visitor behavior to determine when the popups will be shown.
         They need to specify the number of seconds after which the popups will appear, set a scroll percentage threshold that triggers a popup campaign when the user scrolls a certain percentage of a webpage, and decide on the exit intent that displays the popups when a visitor moves the cursor towards the exit button. The exit intent feature is only available for desktop campaigns.
         All behavior settings can be switched on/off using a toggle.
         Behavior settings should work independently, meaning if the user selects a 5-second delay and a 50% scroll threshold, the popup should be triggered in either case.
