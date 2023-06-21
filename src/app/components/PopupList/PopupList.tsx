@@ -6,7 +6,7 @@ import Image from "next/image"
 import { usePaginationSelection } from "../../context/PaginationSelection"
 
 import Popups from "@root/public/popup-generator/data.json"
-import { ITEM_PER_PAGINATION } from "@popUpGeneratorConstants/Constants.js"
+import { ITEM_PER_PAGINATION, ITEM_PER_PAGINATION_MOBILE } from "@popUpGeneratorConstants/Constants.js"
 
 import DetermineItems from "../../helper/DetemineItems"
 import { CoverPopupListItem } from "./CoverPopupListItem"
@@ -15,9 +15,12 @@ import {
     usePopupSelectionSet,
 } from "../../context/PopupSelection"
 import { usePopupStateDispatch } from "../../context/PopupState/PopupState"
-import Link from "next/link"
+import { useScreenWidthDetection } from "../../context/ScreenWidthDetection/ScreenWidthDetection"
 
 export function PopupList() {
+    const isMobile =  useScreenWidthDetection()
+    const itemPerPagination = isMobile ? ITEM_PER_PAGINATION_MOBILE : ITEM_PER_PAGINATION
+
     const [hoveredPopupListItemId, setHoveredPopupListItemId] = useState(0)
 
     const paginationSelection = usePaginationSelection()
@@ -27,7 +30,7 @@ export function PopupList() {
     const dispatch = usePopupStateDispatch()
 
     var paginatedArray = DetermineItems(
-        ITEM_PER_PAGINATION,
+        itemPerPagination,
         Popups,
         paginationSelection,
     )

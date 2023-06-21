@@ -4,6 +4,7 @@ export const ORIGIN_ADDRESS =
         : ""
 
 export const ITEM_PER_PAGINATION = 12
+export const ITEM_PER_PAGINATION_MOBILE = 6
 export const POPUP_SIZE_TYPES = ["small", "medium", "large"]
 export const POPUP_POSITION_PLACES = [
     "top-left",

@@ -6,6 +6,7 @@ import { PaginationSelectionProvider } from "./context/PaginationSelection"
 import { PopupSelectionProvider } from "./context/PopupSelection"
 import { PopupStateProvider } from "./context/PopupState"
 import { UploadStateProvider } from "./context/UploadState/UploadStateContext"
+import { ScreenWidthDetectionProvider } from "./context/ScreenWidthDetection"
 
 export default function RootLayout({
     children,
@@ -15,18 +16,19 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body>
-                <PaginationCountProvider>
-                    <PaginationSelectionProvider>
-                        <PopupSelectionProvider>
-                            <PopupStateProvider>
-                                <UploadStateProvider>
-                                    <section>{children}</section>
-                                </UploadStateProvider>
-                            </PopupStateProvider>
-                        </PopupSelectionProvider>
-                    </PaginationSelectionProvider>
-                </PaginationCountProvider>
-
+                <ScreenWidthDetectionProvider>
+                    <PaginationCountProvider>
+                        <PaginationSelectionProvider>
+                            <PopupSelectionProvider>
+                                <PopupStateProvider>
+                                    <UploadStateProvider>
+                                        <section>{children}</section>
+                                    </UploadStateProvider>
+                                </PopupStateProvider>
+                            </PopupSelectionProvider>
+                        </PaginationSelectionProvider>
+                    </PaginationCountProvider>
+                </ScreenWidthDetectionProvider>
                 <Analytics />
             </body>
         </html>
