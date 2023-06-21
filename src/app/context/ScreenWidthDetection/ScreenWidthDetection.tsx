@@ -11,7 +11,7 @@ export function ScreenWidthDetectionProvider({
 }) {
     const [isMobile, setIsMobile] = useState(false)
     const handleResize = () => {
-        if (window.innerWidth < 720) {
+        if (window.innerWidth < 966) {
             setIsMobile(true)
         } else {
             setIsMobile(false)
@@ -19,7 +19,6 @@ export function ScreenWidthDetectionProvider({
     }
     useEffect(() => {
         window.addEventListener("resize", handleResize)
-        console.log("useEffect is running")
     })
     return (
         <ScreenWidthDetectionContext.Provider value={isMobile}>

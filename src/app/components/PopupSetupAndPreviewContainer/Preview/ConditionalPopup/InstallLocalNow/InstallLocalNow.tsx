@@ -2,7 +2,6 @@ import { usePopupState } from "@root/src/app/context/PopupState/PopupState"
 import Image from "next/image"
 import React from "react"
 import imgSource from "@root/public/popup-generator/logo-image/install-local-now.png"
-import { ORIGIN_ADDRESS } from "@root/src/app/constants/Constants"
 import { InstallLocalNowPopup } from "@root/src/app/types/types"
 
 type Props = {}
@@ -17,7 +16,7 @@ export const InstallLocalNow = (props: Props) => {
     return (
         <div className="absolute inset-0">
             <div className={`h-full flex flex-col text-center ${position}`}>
-                <div className="flex flex-col bg-white rounded-t-xl shadow-[5px_10px_18px_black]">
+                <div className="flex flex-col bg-white rounded-t-xl shadow-[2px_4px_18px_grey]">
                     <div>
                         <Image
                             src={
