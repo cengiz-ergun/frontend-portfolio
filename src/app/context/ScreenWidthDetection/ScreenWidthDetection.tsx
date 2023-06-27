@@ -10,9 +10,9 @@ export function ScreenWidthDetectionProvider({
 }: {
     children: ReactNode
 }) {
-    const [isMobile, setIsMobile] = useState(window.innerWidth < MOBILE_AND_TABLET_MAX_WIDTH_FOR_PAGINATION)
+    const [isMobile, setIsMobile] = useState((typeof window !== "undefined") && window.innerWidth < MOBILE_AND_TABLET_MAX_WIDTH_FOR_PAGINATION)
     const handleResize = () => {
-        if (window.innerWidth < MOBILE_AND_TABLET_MAX_WIDTH_FOR_PAGINATION) {
+        if ((typeof window !== "undefined") && window.innerWidth < MOBILE_AND_TABLET_MAX_WIDTH_FOR_PAGINATION) {
             setIsMobile(true)
         } else {
             setIsMobile(false)
