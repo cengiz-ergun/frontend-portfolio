@@ -54,7 +54,7 @@ export const UploadLogoImage = (props: Props) => {
                 onClick={() => onFileUploadClick()}
             >
                 <Image src={imageOrLogoSource} alt="Upload-logo-image" />
-                <div className="invisible w-0 h-0">
+                <div className="hidden">
                     <UploadButton<OurFileRouter>
                         endpoint="imageUploader"
                         onClientUploadComplete={(res) => {

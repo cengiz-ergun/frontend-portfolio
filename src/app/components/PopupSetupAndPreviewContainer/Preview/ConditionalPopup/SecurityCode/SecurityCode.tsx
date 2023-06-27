@@ -24,7 +24,7 @@ export const SecurityCode = (props: Props) => {
                             : size == "medium"
                             ? "py-8 px-12"
                             : "py-6 px-8"
-                    } flex flex-col shadow-[5px_10px_18px_black] bg-white`}
+                    } flex flex-col shadow-[2px_4px_18px_grey] bg-white`}
                 >
                     <div
                         className={`${

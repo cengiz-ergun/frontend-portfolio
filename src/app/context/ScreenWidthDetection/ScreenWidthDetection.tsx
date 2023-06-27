@@ -1,6 +1,7 @@
 'use client'
 
 import { ReactNode, createContext, useContext, useEffect, useState } from "react"
+import { MOBILE_AND_TABLET_MAX_WIDTH_FOR_PAGINATION } from "../../constants/Constants"
 
 const ScreenWidthDetectionContext = createContext(false)
 
@@ -9,9 +10,9 @@ export function ScreenWidthDetectionProvider({
 }: {
     children: ReactNode
 }) {
-    const [isMobile, setIsMobile] = useState(false)
+    const [isMobile, setIsMobile] = useState(window.innerWidth < MOBILE_AND_TABLET_MAX_WIDTH_FOR_PAGINATION)
     const handleResize = () => {
-        if (window.innerWidth < 966) {
+        if (window.innerWidth < MOBILE_AND_TABLET_MAX_WIDTH_FOR_PAGINATION) {
             setIsMobile(true)
         } else {
             setIsMobile(false)

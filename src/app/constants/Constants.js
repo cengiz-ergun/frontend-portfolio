@@ -2,7 +2,7 @@ export const ORIGIN_ADDRESS =
     typeof window !== "undefined" && window.location.origin
         ? window.location.origin
         : ""
-
+export const MOBILE_AND_TABLET_MAX_WIDTH_FOR_PAGINATION = 966
 export const ITEM_PER_PAGINATION = 12
 export const ITEM_PER_PAGINATION_MOBILE = 6
 export const POPUP_SIZE_TYPES = ["small", "medium", "large"]
