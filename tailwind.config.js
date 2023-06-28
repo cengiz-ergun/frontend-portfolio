@@ -53,6 +53,7 @@ module.exports = {
                 "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
                 "gradient-conic":
                     "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+                "gradient-main": "linear-gradient(180deg, #FFF 0%, #E3F2F6 100%)",
             },
             fontFamily: {
                 poppins: "Poppins",
@@ -66,7 +67,8 @@ module.exports = {
                 codeGeneration: "#333333",
                 "size-selection": "#F5F5F5",
                 "popup-position-selection": "#7D4AEA",
-                "toggle": "#7D4AEA"
+                "toggle": "#7D4AEA",
+                "custom-gray": "#666666"
             },
             colors: {
                 popUpListItemInnerText: "#7D4AEA",

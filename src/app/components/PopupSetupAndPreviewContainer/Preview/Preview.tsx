@@ -26,7 +26,7 @@ export const Preview = (props: Props) => {
                         <CoverAsPleaseWait />
                     )
                 }
-                <div className="lg:hidden z-50 fixed right-5 top-10 w-fit">
+                <div className="lg:hidden z-50 fixed right-5 top-20 w-fit">
                     <Image
                         className="cursor-pointer"
                         alt="hideOrShow"
