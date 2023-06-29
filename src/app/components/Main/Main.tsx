@@ -24,14 +24,13 @@ export const Main = (props: Props) => {
                             modal.cards
                         </span>
                     </a>
-                    <ul className="hidden lg:flex flex-row justify-center items-center text-base gap-7 cursor-pointer">
+                    <ul className="hidden lg:flex flex-row justify-center items-center text-base gap-7">
                         <a href="#main"><li>Main</li></a>
                         <a href="#modal-card-generator"><li>Product Tour</li></a>
                         <a href="#features"><li>Features</li></a>
                         <a href="#faq"><li>FAQ</li></a>
                     </ul>
                     <div className="flex flex-row justify-center items-center gap-7">
-                        {/* <button className="hidden md:block">Sign in</button> */}
                         <a
                             href="#modal-card-generator"
                             className="bg-button text-white px-5 py-2 rounded-xl cursor-pointer hover:opacity-90 shadow-button-smaller"
