@@ -49,11 +49,16 @@ module.exports = {
     ],
     theme: {
         extend: {
+            boxShadow: {
+              'button-smaller': '0px 3px 7px 1px rgba(125, 74, 234, 0.20)',
+              'button-bigger': '0px 5px 10px 2px rgba(125, 74, 234, 0.27)',
+            },
             backgroundImage: {
                 "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
                 "gradient-conic":
                     "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
                 "gradient-main": "linear-gradient(180deg, #FFF 0%, #E3F2F6 100%)",
+                "gradient-transparent": "linear-gradient(214deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.00) 100%)",
             },
             fontFamily: {
                 poppins: "Poppins",
@@ -66,6 +71,8 @@ module.exports = {
                 button: "#7D4AEA",
                 codeGeneration: "#333333",
                 "size-selection": "#F5F5F5",
+                "quality": "#F5F5F5",
+                "faq-active": "#F5F5F5",
                 "popup-position-selection": "#7D4AEA",
                 "toggle": "#7D4AEA",
                 "custom-gray": "#666666"
@@ -75,6 +82,8 @@ module.exports = {
                 "popup-position-selection": "#DDDDDD",
                 "upload-logo-image-border": "#DDDDDD",
                 "content-input-border": "#DDDDDD",
+                "faq-passive": "#777",
+                "faq-active": "#000",
                 "popup-preview-input": "#D2DAE3"
             },
 

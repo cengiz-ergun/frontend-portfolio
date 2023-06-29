@@ -25,16 +25,16 @@ export const Main = (props: Props) => {
                         </span>
                     </a>
                     <ul className="hidden lg:flex flex-row justify-center items-center text-base gap-7 cursor-pointer">
-                        <li>Solutions</li>
-                        <li>Product Tour</li>
-                        <li>Showcase</li>
-                        <li>Pricing</li>
+                        <a href="#main"><li>Main</li></a>
+                        <a href="#modal-card-generator"><li>Product Tour</li></a>
+                        <a href="#features"><li>Features</li></a>
+                        <a href="#faq"><li>FAQ</li></a>
                     </ul>
                     <div className="flex flex-row justify-center items-center gap-7">
-                        <button className="hidden md:block">Sign in</button>
+                        {/* <button className="hidden md:block">Sign in</button> */}
                         <a
                             href="#modal-card-generator"
-                            className="bg-button text-white px-5 py-2 rounded-xl cursor-pointer hover:opacity-90"
+                            className="bg-button text-white px-5 py-2 rounded-xl cursor-pointer hover:opacity-90 shadow-button-smaller"
                         >
                             Try for free
                         </a>
@@ -42,7 +42,7 @@ export const Main = (props: Props) => {
                 </div>
             </nav>
             <div className="flex flex-col w-full">
-                <h1 className="font-poppins text-6xl md:text-7xl font-semibold max-w-[570px] leading-tight mb-5">
+                <h1 className="font-poppins text-6xl md:text-7xl font-semibold max-w-[570px] mb-5">
                     Simple modal card generator
                 </h1>
                 <p className="font-poppins text-2xl leading-normal mb-14">
@@ -52,7 +52,7 @@ export const Main = (props: Props) => {
                 </p>
                 <a
                     href="#modal-card-generator"
-                    className="bg-button text-white text-lg px-7 py-4 w-44 rounded-xl cursor-pointer hover:opacity-90 text-center mb-10"
+                    className="bg-button text-white text-lg px-7 py-4 w-44 rounded-xl cursor-pointer hover:opacity-90 text-center mb-10 shadow-button-bigger"
                 >
                     Try it out now
                 </a>
