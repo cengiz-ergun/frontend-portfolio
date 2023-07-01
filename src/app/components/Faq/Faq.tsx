@@ -8,18 +8,18 @@ type Props = {}
 const faqs = [
     {
         Id: 1,
-        question: "How do I pay for the essentials or premium plan?",
-        answer: "Test answer. We appreciate your inquiries! Please note that this is a test environment, and we cannot process real payments here. To make a real payment, you would normally use a service provider's website or application. Before making a payment, we recommend following secure payment processes and using online payment methods. Remember, the information provided here is for testing purposes only and cannot facilitate real payment transactions.",
+        question: "What is the purpose of this project?",
+        answer: "Its primary goal is to help businesses optimize their online presence and achieve higher levels of customer engagement. By providing customizable and eye-catching popups, Popupgenerator enables users to effectively grow their email lists, increase phone inquiries, and comply with cookie laws. The platform strives to simplify the process of creating popups by offering a no-code solution accessible to users of all skill levels. Popupgenerator's advanced targeting options allow businesses to deliver personalized messages to their target audience, enhancing the effectiveness of their marketing campaigns. With Popupgenerator, businesses can easily create engaging popups that drive conversions and improve customer interactions on their websites.",
     },
     {
         Id: 2,
-        question: "Can I cancel my essentials or premium plan subscription at my time?",
-        answer: "Test answer. You can pay with a credit card or via net banking (if you’re in United States). We willrenew your subscription automatically at the end of every billing cycle. You can paywith a credit card or via net banking (if you’re in United States). We will renew your subscription automatically at the end of every billing cycle.",
+        question: "What did you aim to achieve with this project?",
+        answer: "Focusing on a project in the frontend field, encountering challenges in this area, and finding a job in this field.",
     },
     {
         Id: 3,
-        question: "We need to add new users to our team, how will that be billed?",
-        answer: "Test answer. We're excited to have new users join our team! Regarding billing for new users, please note that our pricing is typically based on a per-user basis. When you add new users to our team, they will be included in the billing calculation according to the selected plan. The billing cycle may depend on the terms and conditions of your subscription. We recommend reviewing our pricing details or contacting our support team for specific information on how new user additions will be billed. Our goal is to ensure a transparent and seamless billing process for our valued customers",
+        question: "Where did you get all these assets?",
+        answer: "I used the figma file belonging to the company named Popupsmart.",
     }
 ]
 
